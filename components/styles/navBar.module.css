@@ -1,0 +1,25 @@
+.navbar {
+  max-width: 1300px;
+  margin: 20px auto;
+  padding: 0 clamp(20px, 5vw, 50px);
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.brand {
+  height: auto;
+  width: clamp(150px, 20vw, 200px);
+}
+
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  gap: clamp(10px, 2vw, 30px);
+}
+
+.nav {
+  font-size: clamp(0.9em, 1.5vw, 1em);
+}
