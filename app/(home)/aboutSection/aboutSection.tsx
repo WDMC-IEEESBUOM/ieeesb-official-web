@@ -17,7 +17,6 @@ const AboutSection = () => {
                     IEEE, pronounced “Eye-triple-E,” stands for the Institute of Electrical and Electronics Engineers. The association is chartered under this name and it is the full legal name. To learn more about the association’s name, for more information please read the <Link href={""} className="underline" > History of IEEE </Link>
                     </div>
                 </div>
-
                 <div className="h-full flex flex-col space-x-0 ml-7 mr-7 ">
                     <div className="rounded-3xl overflow-hidden h-full p-8" style={{background: 'white' , borderRadius: '50px' }} >
                         <div className="text-card-title text-center font-dm-sans text-4xl font-normal flex items-start "  style={{color: '#62809B'}}>
@@ -27,7 +26,6 @@ const AboutSection = () => {
                         IEEE’s core purpose is to foster technological innovation and excellence for the benefit of humanity.
                         </div>
                     </div>
-
                     <div className="rounded-3xl overflow-hidden h-full p-8 mt-7" style={{background: 'white',  borderRadius: '50px'}}> 
                     <div className="text-card-title text-center font-dm-sans text-4xl font-normal flex items-start "  style={{color: '#62809B'}}>
                         Vision
@@ -35,15 +33,8 @@ const AboutSection = () => {
                         <div className="mt-5" style={{color: '#515151' }}>
                         IEEE will be essential to the global technical community and to technical professionals everywhere, and be universally recognized for the contributions of technology and of technical professionals in improving global conditions.
                         </div>
-                    
                     </div>
-                    
-
                 </div>
-
-
-
-
             </div>
             <div className='w-screen' >
             <div className="  rounded-3xl overflow-hidden h-full pl-5 pr-5 sm:pl-10 sm:pr-10 py-8 mr-7 ml-7   mt-32 lg:flex" style={{background: 'white', borderRadius: '50px' }}>
@@ -52,20 +43,15 @@ const AboutSection = () => {
                         About Us
                     </div>
                 </div>
-
                 <div style={{color: '#62809B'}} className="  m-5 flex-initial ">
                 Being the leading IEEE student branch in Sri Lanka, IEEE student branch of University of Moratuwa provides a major platform in 
                 flourishing innovative and creative ideas of the undergraduates. Currently around 300+ subscribers together with an extensive number
                  of fervent volunteers are involved in many aspects. In spite of developing technological and professional skills, it’s vividly concerned about 
                  uplifting unity and harmony among the members too. Therefore we as IEEE UOM community believe that it is not only a student branch but also a family hand 
                  in hand with togetherness and humanity.
-                </div>
-                
+                </div>              
             </div>
             </div>
-
-
-
         </div>
      );
 }
