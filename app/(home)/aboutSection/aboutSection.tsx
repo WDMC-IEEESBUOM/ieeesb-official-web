@@ -5,8 +5,8 @@ const AboutSection = () => {
     return ( 
         <div className="aboutSection ml-26 mr-26 ">
             <h1 className="flex justify-center  text-5xl family-sans font-semibold	  "> About IEEE </h1>
-            <div className="flex justify-center h-517 mt-16 ml-10 mr-10 ">
-                <div className=" mr-8  overflow-hidden max-w-3xl	" style={{ background: 'linear-gradient(132deg, #182C3A 0%, #989FDF 100%, #989FDF 100%)', padding: '40px' , borderRadius: '50px' }}>
+            <div className="md:flex justify-center h-517 mt-16 md:ml-16 md:mr-16 ">
+                <div className="mr-7 ml-7  mb-6 md:mb-0  overflow-hidden md:max-w-3xl md:m-0 	" style={{ background: 'linear-gradient(132deg, #182C3A 0%, #989FDF 100%, #989FDF 100%)', padding: '40px' , borderRadius: '50px' }}>
                     <div className="text-white items-start font-dm-sans text-4xl font-normal pb-3.5	">
                     What is IEEE?
                     </div>
@@ -18,7 +18,7 @@ const AboutSection = () => {
                     </div>
                 </div>
 
-                <div className="h-full flex flex-col space-x-0 ">
+                <div className="h-full flex flex-col space-x-0 ml-7 mr-7 ">
                     <div className="rounded-3xl overflow-hidden h-full p-8" style={{background: 'white' , borderRadius: '50px' }} >
                         <div className="text-card-title text-center font-dm-sans text-4xl font-normal flex items-start "  style={{color: '#62809B'}}>
                         Mission
@@ -45,15 +45,15 @@ const AboutSection = () => {
 
 
             </div>
-
-            <div className="rounded-3xl overflow-hidden h-full pl-10 pr-10 py-8  mr-7 ml-7 mt-32 flex" style={{background: 'white', borderRadius: '50px' }}>
-                <div className="flex flex-col justify-center " >
-                    <div className="content-center text-6xl mr-12 "  style={{ background: 'linear-gradient(96deg, #007D98 9.65%, #00C4EF 94.91%)', color: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text', width:'265px ' }}>
+            <div className='w-screen' >
+            <div className="  rounded-3xl overflow-hidden h-full pl-5 pr-5 sm:pl-10 sm:pr-10 py-8 mr-7 ml-7   mt-32 lg:flex" style={{background: 'white', borderRadius: '50px' }}>
+                <div className="flex lg:flex-col justify-center text-center " >
+                    <div className="content-center text-4xl sm:text-5xl lg:text-6xl sm:mr-12 text-center "  style={{ background: 'linear-gradient(96deg, #007D98 9.65%, #00C4EF 94.91%)', color: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text', width:'265px ' }}>
                         About Us
                     </div>
                 </div>
 
-                <div style={{color: '#62809B'}} className=" m-5 flex-initial ">
+                <div style={{color: '#62809B'}} className="  m-5 flex-initial ">
                 Being the leading IEEE student branch in Sri Lanka, IEEE student branch of University of Moratuwa provides a major platform in 
                 flourishing innovative and creative ideas of the undergraduates. Currently around 300+ subscribers together with an extensive number
                  of fervent volunteers are involved in many aspects. In spite of developing technological and professional skills, it’s vividly concerned about 
@@ -61,6 +61,7 @@ const AboutSection = () => {
                  in hand with togetherness and humanity.
                 </div>
                 
+            </div>
             </div>
 
 
