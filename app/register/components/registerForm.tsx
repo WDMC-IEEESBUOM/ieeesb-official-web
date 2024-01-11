@@ -11,90 +11,47 @@ import { ToastContainer } from "react-toastify";
 import { setDoc, doc, getDocs, collection } from "firebase/firestore";
 import { db } from "./../../../services/firebase";
 import "react-toastify/dist/ReactToastify.css";
-import {
-  clearForm,
-  registration,
-  successMessage,
-  warningMessage,
-} from "../helper";
+import { registration, successMessage, warningMessage } from "../helper";
 
 import { Button } from "@mui/material";
-import { deepOrange } from "@mui/material/colors";
+
+import EmailVerification from "../EmailVerification";
+import Modal from "./Modal";
+import { useRegister } from "../RegisterContext";
 
 const RegisterForm = () => {
-  const [name, setName] = useState("");
-  const [index, setIndex] = useState("");
-  const [mobileNumber, setMobileNumber] = useState("");
-  const [gmail, setGmail] = useState("");
-  const [uomMail, setUomMail] = useState("");
-  const [batch, setBatch] = useState("");
-  const [faculty, setFaculty] = useState("");
-  const [department, setDepartment] = useState("");
-  const [checked, setChecked] = useState(true);
-
-  function handleName(e: React.ChangeEvent<HTMLInputElement>) {
-    setName(e.target.value);
-    localStorage.setItem("name", e.target.value);
-  }
-
-  function handleIndex(e: React.ChangeEvent<HTMLInputElement>) {
-    setIndex(e.target.value);
-    localStorage.setItem("index", e.target.value);
-  }
-
-  function handleTelephone(e: React.ChangeEvent<HTMLInputElement>) {
-    setMobileNumber(e.target.value);
-    localStorage.setItem("contactNo", e.target.value);
-  }
-  function handleGmail(e: React.ChangeEvent<HTMLInputElement>) {
-    setGmail(e.target.value);
-    localStorage.setItem("gmail", e.target.value);
-  }
-  function handleUomMail(e: React.ChangeEvent<HTMLInputElement>) {
-    setUomMail(e.target.value);
-    localStorage.setItem("uomMail", e.target.value);
-  }
-  function handleBatch(e: React.ChangeEvent<HTMLInputElement>) {
-    setBatch(e.target.value);
-    localStorage.setItem("batch", e.target.value);
-  }
-  function handleFaculty(e: React.ChangeEvent<HTMLInputElement>) {
-    setFaculty(e.target.value);
-    localStorage.setItem("faculty", e.target.value);
-  }
-  function handleDepartment(e: React.ChangeEvent<HTMLInputElement>) {
-    setDepartment(e.target.value);
-    localStorage.setItem("department", e.target.value);
-  }
-  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-    setChecked(e.target.checked);
-    localStorage.setItem("checked", e.target.value);
-  }
-  useEffect(function () {
-    const name = localStorage.getItem("name");
-    const index = localStorage.getItem("index");
-    const contactNo = localStorage.getItem("contactNo");
-    const gmail = localStorage.getItem("gmail");
-    const uomMail = localStorage.getItem("uomMail");
-    const batch = localStorage.getItem("batch");
-    const faculty = localStorage.getItem("faculty");
-    const department = localStorage.getItem("department");
-    const checked = localStorage.getItem("checked");
-
-    setName(name);
-    setIndex(index);
-    setMobileNumber(contactNo);
-    setGmail(gmail);
-    setUomMail(uomMail);
-    setBatch(batch);
-    setFaculty(faculty);
-    setDepartment(department);
-    setChecked(checked);
-  }, []);
+  const {
+    handleTelephone,
+    handleGmail,
+    handleUomMail,
+    handleBatch,
+    handleFaculty,
+    handleDepartment,
+    handleChange,
+    handleName,
+    handleIndex,
+    name,
+    index,
+    mobileNumber,
+    gmail,
+    uomMail,
+    batch,
+    faculty,
+    department,
+    checked,
+    showModal,
+    setShowModal,
+    clearForm,
+    clearPIN,
+    setRandomNumber,
+    checkPIN,
+    enterPinButton,
+    setEnterPinButton,
+  }: any = useRegister();
 
   async function submitForm(e: any) {
     e.preventDefault();
-
+    // setShowModal((showModal: any) => !showModal);
     const data = {
       name,
       index,
@@ -107,6 +64,74 @@ const RegisterForm = () => {
       return;
     }
 
+    const result = registration.safeParse(data);
+    if (!result.success) {
+      const formatedError = result.error.format();
+      const nameError = formatedError.name?._errors || "";
+      const telephoneError = formatedError.telephone?._errors || "";
+      const gmailError = formatedError.gmail?._errors || "";
+      const indexError = formatedError.index?._errors || "";
+      const uomMailError = formatedError.uomMail?._errors || "";
+      if (nameError) {
+        warningMessage(nameError[0]);
+        return;
+      } else if (telephoneError) {
+        warningMessage(telephoneError[0]);
+        return;
+      } else if (gmailError) {
+        warningMessage(gmailError[0]);
+        return;
+      } else if (indexError) {
+        warningMessage(indexError[0]);
+        return;
+      } else if (uomMailError) {
+        warningMessage(uomMailError[0]);
+        return;
+      }
+    }
+    try {
+      let checkUser = false;
+
+      const querySnapshot = await getDocs(collection(db, "user"));
+      querySnapshot.forEach((doc) => {
+        const user = Object.values(doc.data()).includes(uomMail);
+        if (user === true) {
+          warningMessage("This email address already registered to the system");
+          checkUser = true;
+        }
+      });
+      if (checkUser) return;
+      if (!checked) {
+        warningMessage("Confirm your details");
+        return;
+      }
+      const random = parseInt(Math.random() * 1000 + 1000);
+      setRandomNumber(random);
+
+      fetch("http://localhost:3000/api/email", {
+        method: "POST",
+        body: JSON.stringify({
+          email: gmail,
+          code: random,
+        }),
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+        },
+      });
+
+      setShowModal(true);
+      setEnterPinButton(true);
+    } catch (e) {
+      console.log(e);
+    }
+  }
+
+  async function saveData() {
+    const check = checkPIN();
+    if (!check) {
+      warningMessage("Your pin number is wrong");
+      return;
+    }
     const storeData = {
       name,
       index,
@@ -118,60 +143,18 @@ const RegisterForm = () => {
       department,
     };
 
-    const result = registration.safeParse(data);
-    if (!result.success) {
-      const formatedError = result.error.format();
-
-      const nameError = formatedError.name?._errors || "";
-      const telephoneError = formatedError.telephone?._errors || "";
-      const gmailError = formatedError.gmail?._errors || "";
-      const indexError = formatedError.index?._errors || "";
-      const uomMailError = formatedError.uomMail?._errors || "";
-
-      if (nameError) warningMessage(nameError[0]);
-      else if (telephoneError) warningMessage(telephoneError[0]);
-      else if (gmailError) warningMessage(gmailError[0]);
-      else if (indexError) warningMessage(indexError[0]);
-      else if (uomMailError) warningMessage(uomMailError[0]);
-    }
-    try {
-      let checkUserExist = false;
-      const querySnapshot = await getDocs(collection(db, "user"));
-      querySnapshot.forEach((doc) => {
-        const user = Object.values(doc.data()).includes(uomMail);
-        if (user === true) {
-          warningMessage("This email address already registered to the system");
-          checkUserExist = true;
-        }
-      });
-
-      if (!checkUserExist) {
-        if (checked) {
-          await setDoc(doc(db, "user", index), storeData);
-          successMessage("Data send successfully");
-          localStorage.clear();
-          clearForm(
-            setName,
-            setIndex,
-            setMobileNumber,
-            setGmail,
-            setUomMail,
-            setBatch,
-            setFaculty,
-            setDepartment,
-            setChecked
-          );
-        } else {
-          warningMessage("Confirm your details");
-        }
-      }
-    } catch (e) {
-      console.log(e);
-    }
+    await setDoc(doc(db, "user", index), storeData);
+    successMessage("Data send successfully");
+    localStorage.clear();
+    clearForm();
+    setEnterPinButton(false);
+    clearPIN();
+    return true;
   }
 
   return (
     <div className="flex justify-left mt-10 ml-20">
+      {showModal && <Modal fn={saveData} />}
       <form onSubmit={submitForm}>
         <div className="flex flex-col gap-5 ">
           <div>
@@ -251,9 +234,7 @@ const RegisterForm = () => {
                 id="demo-simple-select"
                 label="Batch"
                 value={batch}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  handleBatch(e)
-                }
+                onChange={(e: any) => handleBatch(e)}
               >
                 <MenuItem value="Batch 19">Batch 19</MenuItem>
                 <MenuItem value="Batch 20">Batch 20</MenuItem>
@@ -270,9 +251,7 @@ const RegisterForm = () => {
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   label="Faculty"
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    handleFaculty(e)
-                  }
+                  onChange={(e: any) => handleFaculty(e)}
                   value={faculty}
                   inputProps={{ sx: { borderRadius: 10 } }}
                 >
@@ -304,9 +283,7 @@ const RegisterForm = () => {
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
                   label="Department"
-                  onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                    handleDepartment(e)
-                  }
+                  onChange={(e: any) => handleDepartment(e)}
                   value={department}
                 >
                   <MenuItem value="Bio Medical Engineering">
@@ -364,14 +341,27 @@ const RegisterForm = () => {
             />
           </div>
 
-          <Button
-            type="submit"
-            sx={{ width: 200 }}
-            size="small"
-            variant="contained"
-          >
-            Save details
-          </Button>
+          <div className="  gap-4 flex flex-col ">
+            <Button
+              type="submit"
+              sx={{ width: 200 }}
+              size="small"
+              variant="contained"
+            >
+              Save details
+            </Button>
+            {enterPinButton && (
+              <Button
+                onClick={() => setShowModal(true)}
+                sx={{ width: 200 }}
+                size="small"
+                variant="contained"
+              >
+                Enter PIN
+              </Button>
+            )}
+          </div>
+
           <div className="mb-10"></div>
           {/* <button type="submit" className="bg-blue-600 w-40 rounded-lg mb-5">
             Save details

@@ -38,25 +38,3 @@ export function successMessage(message: string) {
     theme: "colored",
   });
 }
-
-export function clearForm(
-  setName: (s: string) => void,
-  setIndex: (s: string) => void,
-  setMobileNumber: (s: string) => void,
-  setGmail: (s: string) => void,
-  setUomMail: (s: string) => void,
-  setBatch: (s: string) => void,
-  setFaculty: (s: string) => void,
-  setDepartment: (s: string) => void,
-  setChecked: (s: boolean) => void
-) {
-  setName("");
-  setIndex("");
-  setMobileNumber("");
-  setGmail("");
-  setUomMail("");
-  setBatch("");
-  setFaculty("");
-  setDepartment("");
-  setChecked(false);
-}
