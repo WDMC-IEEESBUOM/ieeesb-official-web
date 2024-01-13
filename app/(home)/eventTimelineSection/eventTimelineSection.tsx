@@ -10,21 +10,21 @@ const EventTimelineSection = () => {
       <div className="container block sm:flex ">
         <div className="mx-auto gap-9 content-start column-3 w-[90%] sm:w-[475px] sm:h-[100%] ">
 
-          <div className="w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-white-100 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:mb-[200px]">
+          <div className="w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:mb-[200px]">
             <div className="w-1/2 grid place-items-center">
               <p className="text-lg font-large">MoraForesight 1.0</p>
               <p className="text-md">2023</p>
               </div>
             <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] sm:rounded-r-[50px] sm:h-[198px]" src="/eventbg.jpg" width={200} height={200} alt="" /></div>
           </div>
-          <div className="w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-white-100 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:my-[200px]">
+          <div className="w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:my-[200px]">
             <div className="w-1/2 grid place-items-center">
               <p className="text-lg font-large">MoraForesight 1.0</p>
               <p className="text-md">2023</p>
               </div>
             <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] sm:rounded-r-[50px] sm:h-[198px]" src="/eventbg.jpg" width={200} height={200} alt="" /></div>
           </div>
-          <div className="w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-white-100 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:my-[200px]">
+          <div className="w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:my-[200px]">
             <div className="w-1/2 grid place-items-center">
               <p className="text-lg font-large">MoraForesight 1.0</p>
               <p className="text-md">2023</p>
@@ -49,7 +49,7 @@ const EventTimelineSection = () => {
         
 
         <div className="mx-auto gap-9 content-start column-3 w-[90%] sm:w-[475px] sm:h-[100%] pt-[40px]">
-          <div className="w-full h-[150px]  bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-white-100 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:my-[200px]">
+          <div className="w-full h-[150px]  bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:my-[200px]">
               <div className="w-1/2 grid place-items-center">
                 <p className="text-lg font-large">MoraForesight 1.0</p>
                 <p className="text-md">2023</p>
@@ -57,7 +57,7 @@ const EventTimelineSection = () => {
               <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] sm:rounded-r-[50px] sm:h-[198px]" src="/eventbg.jpg" width={200} height={200} alt="" /></div>
             </div>
 
-            <div className="w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-white-100 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:my-[200px]">
+            <div className="w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:my-[200px]">
               <div className="w-1/2 grid place-items-center">
                 <p className="text-lg font-large">MoraForesight 1.0</p>
                 <p className="text-md">2023</p>
@@ -65,7 +65,7 @@ const EventTimelineSection = () => {
               <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] sm:rounded-r-[50px] sm:h-[198px]" src="/eventbg.jpg" width={200} height={200} alt="" /></div>
             </div>
 
-            <div className="w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-white-100 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:my-[200px]">
+            <div className="w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] sm:rounded-[50px] sm:h-[200px] sm:my-[200px]">
               <div className="w-1/2 grid place-items-center">
                 <p className="text-lg font-large">MoraForesight 1.0</p>
                 <p className="text-md">2023</p>
