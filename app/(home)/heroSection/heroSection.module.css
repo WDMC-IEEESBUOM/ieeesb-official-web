@@ -1,0 +1,21 @@
+@import url("https://fonts.cdnfonts.com/css/netron");
+
+.text {
+  text-align: center;
+  font-family: "Netron", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 152.308%; /* 91.385px */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: linear-gradient(
+    93deg,
+    #0e559d 45.1%,
+    #51e6fd 51.8%,
+    #c6a5ff 60.3%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
