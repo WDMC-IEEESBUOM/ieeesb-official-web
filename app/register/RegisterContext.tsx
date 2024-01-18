@@ -9,6 +9,7 @@ const registerContext = createContext();
 interface Props {
   children: ReactChild | ReactChildren;
 }
+
 function RegisterProvider({ children }: Props) {
   const [name, setName] = useState("");
   const [index, setIndex] = useState("");
@@ -113,9 +114,29 @@ function RegisterProvider({ children }: Props) {
     setFouthInput("");
   }
 
+  function sendOTP() {
+    const random = parseInt(Math.random() * 1000 + 1000);
+    setRandomNumber(random);
+
+    fetch("http://localhost:3000/api/email", {
+      method: "POST",
+      body: JSON.stringify({
+        email: gmail,
+        code: random,
+      }),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+    });
+
+    setShowModal(true);
+    setEnterPinButton(true);
+  }
+
   return (
     <registerContext.Provider
       value={{
+        sendOTP,
         clearPIN,
         enterPinButton,
         setEnterPinButton,

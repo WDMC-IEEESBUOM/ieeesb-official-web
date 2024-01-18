@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
 import Select from "@mui/material/Select";
@@ -15,7 +15,6 @@ import { registration, successMessage, warningMessage } from "../helper";
 
 import { Button } from "@mui/material";
 
-import EmailVerification from "../EmailVerification";
 import Modal from "./Modal";
 import { useRegister } from "../RegisterContext";
 
@@ -47,6 +46,7 @@ const RegisterForm = () => {
     checkPIN,
     enterPinButton,
     setEnterPinButton,
+    sendOTP,
   }: any = useRegister();
 
   async function submitForm(e: any) {
@@ -105,22 +105,7 @@ const RegisterForm = () => {
         warningMessage("Confirm your details");
         return;
       }
-      const random = parseInt(Math.random() * 1000 + 1000);
-      setRandomNumber(random);
-
-      fetch("http://localhost:3000/api/email", {
-        method: "POST",
-        body: JSON.stringify({
-          email: gmail,
-          code: random,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
-        },
-      });
-
-      setShowModal(true);
-      setEnterPinButton(true);
+      sendOTP();
     } catch (e) {
       console.log(e);
     }
@@ -156,7 +141,7 @@ const RegisterForm = () => {
     <div className="flex justify-left mt-10 ml-20">
       {showModal && <Modal fn={saveData} />}
       <form onSubmit={submitForm}>
-        <div className="flex flex-col gap-5 ">
+        <div className="flex flex-col gap-8 ">
           <div>
             <TextField
               id="outlined-basic"
@@ -166,7 +151,9 @@ const RegisterForm = () => {
               value={name}
               onChange={(e) => handleName(e)}
               required
-              InputProps={{ sx: { borderRadius: 10 } }}
+              InputProps={{
+                sx: { borderRadius: 10, color: "white" },
+              }}
             />
           </div>
           <div>
@@ -195,36 +182,36 @@ const RegisterForm = () => {
               }
             />
           </div>
-          <div className="md:grid md:grid-cols-4 lg:gap-5   flex flex-col gap-4">
-            <div>
-              <TextField
-                InputProps={{ sx: { borderRadius: 10 } }}
-                id="outlined-basic"
-                size="small"
-                required
-                label="University Email(sample@uom.lk)"
-                variant="outlined"
-                value={uomMail}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  handleUomMail(e)
-                }
-              />
-            </div>
-            <div>
-              <TextField
-                InputProps={{ sx: { borderRadius: 10 } }}
-                id="outlined-basic"
-                size="small"
-                label="Gmail"
-                required
-                variant="outlined"
-                value={gmail}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-                  handleGmail(e)
-                }
-              />
-            </div>
+
+          <div>
+            <TextField
+              InputProps={{ sx: { borderRadius: 10 } }}
+              id="outlined-basic"
+              size="small"
+              required
+              label="University Email(sample@uom.lk)"
+              variant="outlined"
+              value={uomMail}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                handleUomMail(e)
+              }
+            />
           </div>
+          <div>
+            <TextField
+              InputProps={{ sx: { borderRadius: 10 } }}
+              id="outlined-basic"
+              size="small"
+              label="Gmail"
+              required
+              variant="outlined"
+              value={gmail}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                handleGmail(e)
+              }
+            />
+          </div>
+
           <div>
             <FormControl sx={{ width: 220 }} size="small">
               <InputLabel id="demo-simple-select-label">Batch</InputLabel>
@@ -234,6 +221,7 @@ const RegisterForm = () => {
                 id="demo-simple-select"
                 label="Batch"
                 value={batch}
+                className="rounded-full"
                 onChange={(e: any) => handleBatch(e)}
               >
                 <MenuItem value="Batch 19">Batch 19</MenuItem>
@@ -243,95 +231,93 @@ const RegisterForm = () => {
               </Select>
             </FormControl>
           </div>
-          <div className="md:grid md:grid-cols-4 lg:gap-5 md:gap-52 flex flex-col gap-4">
-            <div>
-              <FormControl sx={{ width: 220 }} size="small">
-                <InputLabel id="demo-simple-select-label">Faculty</InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  label="Faculty"
-                  onChange={(e: any) => handleFaculty(e)}
-                  value={faculty}
-                  inputProps={{ sx: { borderRadius: 10 } }}
-                >
-                  <MenuItem value="Faculty Of Architecture">
-                    Faculty Of Architecture
-                  </MenuItem>
-                  <MenuItem value=" Faculty Of Engineering">
-                    Faculty Of Engineering
-                  </MenuItem>
-                  <MenuItem value=" Faculty Of Business">
-                    Faculty Of Business
-                  </MenuItem>
-                  <MenuItem value="Faculty Of Information technology">
-                    Faculty Of Information technology
-                  </MenuItem>
-                  <MenuItem value="Faculty Of Medicine">
-                    Faculty Of Medicine
-                  </MenuItem>
-                </Select>
-              </FormControl>
-            </div>
 
-            <div>
-              <FormControl sx={{ minWidth: 220 }} size="small">
-                <InputLabel id="demo-simple-select-label">
-                  Department
-                </InputLabel>
-                <Select
-                  labelId="demo-simple-select-label"
-                  id="demo-simple-select"
-                  label="Department"
-                  onChange={(e: any) => handleDepartment(e)}
-                  value={department}
-                >
-                  <MenuItem value="Bio Medical Engineering">
-                    Bio Medical Engineering
-                  </MenuItem>
-                  <MenuItem value="Electronic and Telecommunication Engineering">
-                    Electronic and Telecommunication Engineering
-                  </MenuItem>
-                  <MenuItem value="Electrical Engineering">
-                    Electrical Engineering
-                  </MenuItem>
-                  <MenuItem value="Mechanical Engineering">
-                    Mechanical Engineering
-                  </MenuItem>
-                  <MenuItem value="Civil Engineering">
-                    Civil Engineering
-                  </MenuItem>
-                  <MenuItem value="Material Science Engineering">
-                    Material Science Engineering
-                  </MenuItem>
-                  <MenuItem value="Chemical and Process Engineering">
-                    Chemical and Process Engineering
-                  </MenuItem>
-                  <MenuItem value="Transport Management and Logistics Engineering">
-                    Transport Management and Logistics Engineering
-                  </MenuItem>
-                  <MenuItem value="Textile and Apparel Engineering">
-                    Textile and Apparel Engineering
-                  </MenuItem>
-                  <MenuItem value="Earth Resource Engineering">
-                    Earth Resource Engineering
-                  </MenuItem>
-                  <MenuItem value="Computer Science & Engneering">
-                    Computer Science & Engneering
-                  </MenuItem>
-                  <MenuItem value="Information Technology">
-                    Information Technology
-                  </MenuItem>
-                  <MenuItem value="Interdisciplinary Study">
-                    Interdisciplinary Study
-                  </MenuItem>
-                  <MenuItem value="Computational Mathematics">
-                    Computational Mathematics
-                  </MenuItem>
-                </Select>
-              </FormControl>
-            </div>
+          <div>
+            <FormControl sx={{ width: 220 }} size="small">
+              <InputLabel id="demo-simple-select-label">Faculty</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                label="Faculty"
+                onChange={(e: any) => handleFaculty(e)}
+                value={faculty}
+                className="rounded-full"
+                inputProps={{ sx: { borderRadius: 10 } }}
+              >
+                <MenuItem value="Faculty Of Architecture">
+                  Faculty Of Architecture
+                </MenuItem>
+                <MenuItem value=" Faculty Of Engineering">
+                  Faculty Of Engineering
+                </MenuItem>
+                <MenuItem value=" Faculty Of Business">
+                  Faculty Of Business
+                </MenuItem>
+                <MenuItem value="Faculty Of Information technology">
+                  Faculty Of Information technology
+                </MenuItem>
+                <MenuItem value="Faculty Of Medicine">
+                  Faculty Of Medicine
+                </MenuItem>
+              </Select>
+            </FormControl>
           </div>
+
+          <div>
+            <FormControl sx={{ minWidth: 220 }} size="small">
+              <InputLabel id="demo-simple-select-label">Department</InputLabel>
+              <Select
+                labelId="demo-simple-select-label"
+                id="demo-simple-select"
+                label="Department"
+                className="rounded-full"
+                onChange={(e: any) => handleDepartment(e)}
+                value={department}
+              >
+                <MenuItem value="Bio Medical Engineering">
+                  Bio Medical Engineering
+                </MenuItem>
+                <MenuItem value="Electronic and Telecommunication Engineering">
+                  Electronic and Telecommunication Engineering
+                </MenuItem>
+                <MenuItem value="Electrical Engineering">
+                  Electrical Engineering
+                </MenuItem>
+                <MenuItem value="Mechanical Engineering">
+                  Mechanical Engineering
+                </MenuItem>
+                <MenuItem value="Civil Engineering">Civil Engineering</MenuItem>
+                <MenuItem value="Material Science Engineering">
+                  Material Science Engineering
+                </MenuItem>
+                <MenuItem value="Chemical and Process Engineering">
+                  Chemical and Process Engineering
+                </MenuItem>
+                <MenuItem value="Transport Management and Logistics Engineering">
+                  Transport Management and Logistics Engineering
+                </MenuItem>
+                <MenuItem value="Textile and Apparel Engineering">
+                  Textile and Apparel Engineering
+                </MenuItem>
+                <MenuItem value="Earth Resource Engineering">
+                  Earth Resource Engineering
+                </MenuItem>
+                <MenuItem value="Computer Science & Engneering">
+                  Computer Science & Engneering
+                </MenuItem>
+                <MenuItem value="Information Technology">
+                  Information Technology
+                </MenuItem>
+                <MenuItem value="Interdisciplinary Study">
+                  Interdisciplinary Study
+                </MenuItem>
+                <MenuItem value="Computational Mathematics">
+                  Computational Mathematics
+                </MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+
           <div>
             <FormControlLabel
               control={<Checkbox />}
@@ -344,7 +330,7 @@ const RegisterForm = () => {
           <div className="  gap-4 flex flex-col ">
             <Button
               type="submit"
-              sx={{ width: 200 }}
+              sx={{ width: 200, borderRadius: 10 }}
               size="small"
               variant="contained"
             >

@@ -10,7 +10,7 @@ export async function POST(req: Request) {
     resend.emails.send({
       from: "onboarding@resend.dev",
       to: `${email}`,
-      subject: "Hello World",
+      subject: "Registraion of IEEE student branch",
       react: EmailVerification({ code }),
     });
 

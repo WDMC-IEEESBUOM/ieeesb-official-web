@@ -36,10 +36,6 @@ interface SlackConfirmEmailProps {
   code?: string;
 }
 
-const baseUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
-  : "";
-
 export const EmailVerification = ({ code }: SlackConfirmEmailProps) => (
   <Html>
     <Head />
@@ -48,7 +44,7 @@ export const EmailVerification = ({ code }: SlackConfirmEmailProps) => (
       <Container style={container}>
         <Section style={logoContainer}>
           <Img
-            src={`${baseUrl}/static/slack-logo.png`}
+            src={"http://localhost:3000/IEEE%20STUDENT%20B%20LOGO.jpg"}
             width="120"
             height="36"
             alt="Slack"
@@ -57,7 +53,7 @@ export const EmailVerification = ({ code }: SlackConfirmEmailProps) => (
         <Heading style={h1}>Confirm your email address</Heading>
         <Text style={heroText}>
           Your confirmation code is below - enter it in your open browser window
-          and we'll help you to register.
+          and we will help you to register.
         </Text>
 
         <Section style={codeBox}>
@@ -65,8 +61,8 @@ export const EmailVerification = ({ code }: SlackConfirmEmailProps) => (
         </Section>
 
         <Text style={text}>
-          If you didn't request this email, there's nothing to worry about - you
-          can safely ignore it.
+          If you did not request this email, there is nothing to worry about -
+          you can safely ignore it.
         </Text>
 
         {/* <Section>
@@ -170,31 +166,6 @@ export const EmailVerification = ({ code }: SlackConfirmEmailProps) => (
 );
 
 export default EmailVerification;
-
-const footerText = {
-  fontSize: "12px",
-  color: "#b7b7b7",
-  lineHeight: "15px",
-  textAlign: "left" as const,
-  marginBottom: "50px",
-};
-
-const footerLink = {
-  color: "#b7b7b7",
-  textDecoration: "underline",
-};
-
-const footerLogos = {
-  marginBottom: "32px",
-  paddingLeft: "8px",
-  paddingRight: "8px",
-  width: "100%",
-};
-
-const socialMediaIcon = {
-  display: "inline",
-  marginLeft: "32px",
-};
 
 const main = {
   backgroundColor: "#ffffff",

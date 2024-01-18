@@ -1,5 +1,6 @@
 import React from "react";
 import { useRegister } from "../RegisterContext";
+import { Button } from "@mui/material";
 
 interface modalProps {
   fn: () => void;
@@ -15,31 +16,31 @@ export default function Modal({ fn }: modalProps) {
     thiredInput,
     setThiredInput,
     fouthInput,
-
+    sendOTP,
     setFouthInput,
   }: any = useRegister();
   return (
     <>
       <>
-        <div className="justify-center items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-          <div className="relative w-auto my-6 mx-auto max-w-3xl">
+        <div className="justify-center  items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none  ">
+          <div className="relative  w-1/2 my-6 mx-auto max-w-3xl">
             {/*content*/}
             <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
               {/*header*/}
               <div className="flex items-start justify-between p-5 border-b border-solid border-blueGray-200 rounded-t">
-                <h3 className="text-3xl font-semibold">PIN </h3>
+                <h3 className="text-3xl font-semibold">Email verification </h3>
                 <button
-                  className="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                  className="p-1  ml-auto bg-white border-0 text-black  rounded-full  float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
                   onClick={() => setShowModal(false)}
                 >
-                  <span className="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                  <span className=" text-black  h-6 w-6 text-2xl block outline-none focus:outline-none">
                     ×
                   </span>
                 </button>
               </div>
               {/*body*/}
-              <div className="relative p-6 flex-auto">
-                <div> Check your uom mail address and enter pin code</div>
+              <div className="relative p-6 flex flex-col justify-center items-center">
+                <div> Your code was sent to you via uom email</div>
                 <div
                   className="flex justify-center space-x-3 mt-10"
                   data-hs-pin-input
@@ -47,6 +48,7 @@ export default function Modal({ fn }: modalProps) {
                   <input
                     type="text"
                     value={firstInput}
+                    maxLength={1}
                     onChange={(e) => setFirstInput(e.target.value)}
                     className="block h-10 w-[38px] text-center border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                     data-hs-pin-input-item
@@ -54,6 +56,7 @@ export default function Modal({ fn }: modalProps) {
                   <input
                     type="text"
                     value={secondInput}
+                    maxLength={1}
                     onChange={(e) => setSecondInput(e.target.value)}
                     className="block w-[38px] text-center border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                     data-hs-pin-input-item
@@ -61,6 +64,7 @@ export default function Modal({ fn }: modalProps) {
                   <input
                     type="text"
                     value={thiredInput}
+                    maxLength={1}
                     onChange={(e) => setThiredInput(e.target.value)}
                     className="block w-[38px] text-center border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                     data-hs-pin-input-item
@@ -71,25 +75,22 @@ export default function Modal({ fn }: modalProps) {
                     onChange={(e) => setFouthInput(e.target.value)}
                     className="block w-[38px] text-center border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                     data-hs-pin-input-item
+                    maxLength={1}
                   />
                 </div>
               </div>
               {/*footer*/}
-              <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b">
-                <button
-                  className="text-red-500 background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  type="button"
-                  onClick={() => setShowModal(false)}
+              <div className="flex items-center justify-end p-6 border-t border-solid border-blueGray-200 rounded-b gap-5 bg-black">
+                <Button
+                  variant="outlined"
+                  color="error"
+                  onClick={() => sendOTP()}
                 >
-                  Close
-                </button>
-                <button
-                  className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                  type="button"
-                  onClick={() => fn()}
-                >
-                  Enter
-                </button>
+                  Resend
+                </Button>
+                <Button variant="outlined" color="success" onClick={() => fn()}>
+                  Verify
+                </Button>
               </div>
             </div>
           </div>
