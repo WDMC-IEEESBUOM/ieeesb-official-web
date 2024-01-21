@@ -1,6 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 
+
 const EventTimelineSection = () => {
   return (
     <div className="container rounded-[20px] w-[375px] h-[100%] block bg-midnight lg:w-[100%] lg:h-[100%] lg:rounded-[40px]">
@@ -99,6 +100,7 @@ const EventTimelineSection = () => {
     </div>
   );
 }
+
 
 
 export default EventTimelineSection;
