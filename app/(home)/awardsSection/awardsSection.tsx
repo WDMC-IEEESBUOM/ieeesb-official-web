@@ -26,16 +26,18 @@ export default class NextJsCarousel extends Component {
         </h2>
         <div className="grid">
           {/* Description section */}
-          <div className="flex flex-col justify-center items-center text-center text-xl text-gray-700 px-8 grid-item col-start-1 row-start-1 col-end-12 row-end-2 lg:col-start-1 row-start-1 col-end-3 row-end-2">
-            <h2 className="content-center text-3xl sm:text-2xl lg:text-4xl sm:mr-12 text-center "  style={{ background: 'linear-gradient(96deg, #007D98 9.65%, #00C4EF 94.91%)', color: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text', width:'265px ' }}>We have got clutch awards!</h2>
-            <p className="text-base">
-              Check out some of our most prestigious accolades that showcase our
-              commitment to excellence.
+          <div className="grid grid-cols-1 lg:grid-cols-1 grid-rows-1 text-gray-700 items-center text-center lg:pr-8">
+            <text className="text-blue-500">
+            We have got clutch awards!           
+            <p className="text-gray-700 pb-10">
+            check out our awards
             </p>
+            </text>
+          
           </div>
-          <div className="grid-item col-start-1 row-start-3 col-end-3 row-end-12 lg:col-start-3 row-start-1 col-end-12 row-end-12">
+          <div className="grid-item lg:col-start-2">
             <Carousel autoPlay infiniteLoop centerMode centerSlidePercentage={60}>
-              <div>
+              <div className= "rounded-lg bg-gray-100 flex flex-col justify-center items-center">
                 <Image src={Award1} alt="image1" width={300} height={300} />
                 <p className="legend">Image 1</p>
               </div>
