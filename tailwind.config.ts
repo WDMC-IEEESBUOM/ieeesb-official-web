@@ -14,6 +14,12 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      screens:{
+        'phone': "180px",
+      },
+      width:{
+        108:"108px"
+      },
       colors: {
         'midnight' : '#101b35',
         'cyan-lite': '#22d3ee',
