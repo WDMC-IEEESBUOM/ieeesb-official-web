@@ -7,6 +7,7 @@ const config: Config = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -15,10 +16,13 @@ const config: Config = {
       },
       screens:{
         'phone': "180px",
-
       },
       width:{
         108:"108px"
+      },
+      colors: {
+        'midnight' : '#101b35',
+        'cyan-lite': '#22d3ee',
       },
     },
   },
