@@ -1,12 +1,141 @@
+"use client"
+
 import Link from 'next/link'
+import React, { useEffect } from 'react';
+
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger); 
+
+
+
 
 
 const AboutSection = () => {
+
+    useEffect(() => {
+        let about = document.querySelector('.about-ieee');
+        gsap.fromTo(
+            about,
+            {scale: 0.2 , opacity: 0},
+            {
+                scale: 1,
+                opacity: 1,
+                duration: 1,
+                ease: "power1.inOut",
+                scrollTrigger:{
+                    trigger: '.about-ieee',
+                    start: "top bottom",
+                    // end: "center center",
+                    toggleActions: "start pause resume pause",
+                    scrub: 1,
+                }
+            }
+        )
+
+    })
+
+    useEffect(() => {
+        let box_1 = document.querySelector('.boxc-1');
+        gsap.fromTo(
+            box_1,
+            {x: -800 , opacity: 0},
+            {
+                x: 0,
+                scale: 1,
+                opacity: 1,
+                duration: 1,
+                ease: "power1.inOut",
+                scrollTrigger:{
+                    trigger: '.boxc-1',
+                    start: "top center",
+                    end: "center center",
+                    toggleActions: "start pause resume pause",
+                    scrub: 1,
+                }
+            }
+        )
+
+    })
+
+    useEffect(() => {
+        let box_r_1 = document.querySelector('.box-r-1');
+        gsap.fromTo(
+            box_r_1,
+            {xPercent: 100 , opacity: 0},
+            {
+                xPercent:0,
+                scale: 1,
+                opacity: 1,
+                duration: 1,
+                ease: "power1.inOut",
+                scrollTrigger:{
+                    trigger: '.box-r-1',
+                    start: "top center",
+                    end: "center center",
+                    toggleActions: "start pause resume pause",
+                    scrub: 1,
+                }
+            }
+        )
+
+    })
+
+
+    useEffect(() => {
+        let box_r_2 = document.querySelector('.box-r-2');
+        gsap.fromTo(
+            box_r_2,
+            {xPercent: 100 , opacity: 0},
+            {
+                xPercent:0,
+                scale: 1,
+                opacity: 1,
+                duration: 1,
+                ease: "power1.inOut",
+                scrollTrigger:{
+                    trigger: '.box-r-2',
+                    start: "top center",
+                    end: "center center",
+                    toggleActions: "start pause resume pause",
+                    scrub: 1,
+                }
+            }
+        )
+
+    })
+
+    useEffect(() => {
+        let fin_box = document.querySelector('.fin-box');
+        gsap.fromTo(
+            fin_box,
+            { opacity: 0},
+            {
+                scale: 1,
+                opacity: 1,
+                duration: 1,
+                scrollTrigger:{
+                    trigger: '.fin-box',
+                    start: "top center",
+                    end: "center center",
+                    toggleActions: "start pause resume pause",
+                    scrub: 1,
+                }
+            }
+        )
+
+    })
+
+
+
+
     return ( 
+        
         <div className="aboutSection ml-26 mr-26 ">
-            <h1 className="flex justify-center  text-5xl family-sans font-semibold	  "> About IEEE </h1>
+
+            <h1  className="about-ieee flex justify-center  text-5xl family-sans font-semibold	  "> About IEEE </h1>
             <div className="md:flex justify-center h-517 mt-16 md:ml-16 md:mr-16 ">
-                <div className="mr-7 ml-7  mb-6 md:mb-0  overflow-hidden md:max-w-3xl md:m-0 	" style={{ background: 'linear-gradient(132deg, #182C3A 0%, #989FDF 100%, #989FDF 100%)', padding: '40px' , borderRadius: '50px' }}>
+                <div className="boxc-1 mr-7 ml-7  mb-6 md:mb-0  overflow-hidden md:max-w-3xl md:m-0 	" style={{ background: 'linear-gradient(132deg, #182C3A 0%, #989FDF 100%, #989FDF 100%)', padding: '40px' , borderRadius: '50px' }}>
                     <div className="text-white items-start font-dm-sans text-4xl font-normal pb-3.5	">
                     What is IEEE?
                     </div>
@@ -18,7 +147,7 @@ const AboutSection = () => {
                     </div>
                 </div>
                 <div className="h-full flex flex-col space-x-0 ml-7 mr-7 ">
-                    <div className="rounded-3xl overflow-hidden h-full p-8" style={{background: 'white' , borderRadius: '50px' }} >
+                    <div className=" box-r-1 rounded-3xl overflow-hidden h-full p-8" style={{background: 'white' , borderRadius: '50px' }} >
                         <div className="text-card-title text-center font-dm-sans text-4xl font-normal flex items-start "  style={{color: '#62809B'}}>
                         Mission
                         </div>
@@ -26,7 +155,7 @@ const AboutSection = () => {
                         IEEE’s core purpose is to foster technological innovation and excellence for the benefit of humanity.
                         </div>
                     </div>
-                    <div className="rounded-3xl overflow-hidden h-full p-8 mt-7" style={{background: 'white',  borderRadius: '50px'}}> 
+                    <div className=" box-r-2  rounded-3xl overflow-hidden h-full p-8 mt-7" style={{background: 'white',  borderRadius: '50px'}}> 
                     <div className="text-card-title text-center font-dm-sans text-4xl font-normal flex items-start "  style={{color: '#62809B'}}>
                         Vision
                         </div>
@@ -37,7 +166,7 @@ const AboutSection = () => {
                 </div>
             </div>
             <div className='w-screen' >
-            <div className="  rounded-3xl overflow-hidden h-full pl-5 pr-5 sm:pl-10 sm:pr-10 py-8 mr-7 ml-7   mt-32 lg:flex" style={{background: 'white', borderRadius: '50px' }}>
+            <div className="fin-box  rounded-3xl overflow-hidden h-full pl-5 pr-5 sm:pl-10 sm:pr-10 py-8 mr-7 ml-7   mt-32 lg:flex" style={{background: 'white', borderRadius: '50px' }}>
                 <div className="flex lg:flex-col justify-center text-center " >
                     <div className="content-center text-4xl sm:text-5xl lg:text-6xl sm:mr-12 text-center "  style={{ background: 'linear-gradient(96deg, #007D98 9.65%, #00C4EF 94.91%)', color: 'transparent', WebkitBackgroundClip: 'text', backgroundClip: 'text', width:'265px ' }}>
                         About Us
@@ -52,6 +181,7 @@ const AboutSection = () => {
                 </div>              
             </div>
             </div>
+
         </div>
      );
 }
