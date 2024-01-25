@@ -8,7 +8,6 @@ import Award2 from "./images/Outstanding chapter award.jpg";
 import Award3 from "./images/Best technical chapter.jpg";
 import Award4 from "./images/Best Student Branch Project Award 2023.jpg";
 import Award5 from "./images/best industry collabarative project.jpg";
-
 const slidesData = [
   {
     image: Award1,
@@ -46,7 +45,6 @@ const slidesData = [
     link: "https://m.facebook.com/story.php?story_fbid=pfbid027s35cXfZiufheF2ZpVu69L1Dhuprmux4X2dL5SWQXxHFTqvidfsqyErVTPikZiLql&id=100064489578301&mibextid=Nif5oz",
   },
 ]
-
 interface CarouselSlideProps {
   image: StaticImageData;
   alt: string;
@@ -88,7 +86,6 @@ export default class NextJsCarousel extends Component {
           AWARDS
         </h2>
         <div className="grid">
-
           {/* use this section if you want to add a text section left to the carousel. Then change the grid-item class to grid-item lg:col-start-2 in carousel div */}
           {/* <div className="grid grid-cols-1 lg:grid-cols-1 grid-rows-1 text-gray-700 lg:pr-8 sm:text-center">
             <text className="text-blue-500">
@@ -96,7 +93,6 @@ export default class NextJsCarousel extends Component {
               <p className="text-gray-700 pb-10">check out our awards</p>
             </text>
           </div> */}
-
           <div className="grid-item lg:col-start-1">
             <Carousel
               autoPlay
