@@ -188,34 +188,42 @@ const EventTimelineSection = () => {
         <div className="mx-auto gap-9 content-start column-3 w-[90%] lg:w-[475px] lg:h-[100%] ">
 
           <div className="event1 w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] lg:rounded-[50px] lg:h-[200px] lg:mb-[200px] lg:w-[90%] lg:mx-5">
-            <div className="w-1/2 grid place-items-center">
-              <p className="text-lg font-large">IEEE Open Week</p>
-              <p className="text-md">January 2024</p>
+            <div className="flex w-1/2 items-center justify-center">
+              <div className="text-center mx-5">
+                <p className="text-lg ">IEEE Open Week</p>
+                <p className="text-sm text-slate-400">January 2024</p>
               </div>
+            </div>
             <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] lg:rounded-r-[50px] lg:h-[198px]" src="/images/eventimeline/open.png" width={200} height={200} alt="" /></div>
           </div>
           
           <div className="event3 w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] lg:rounded-[50px] lg:h-[200px] lg:my-[200px] lg:w-[90%] lg:mx-5">
-            <div className="w-1/2 grid place-items-center">
-              <p className="text-lg font-large">MoraUXplore 2.0</p>
-              <p className="text-md">April 2024</p>
+          <div className="flex w-1/2 items-center justify-center">
+              <div className="text-center mx-5">
+                <p className="text-lg ">Mora UXplore</p>
+                <p className="text-sm text-slate-400">April 2024</p>
               </div>
+            </div>
             <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] lg:rounded-r-[50px] lg:h-[198px]" src="/images/eventimeline/uxpl.png" width={200} height={200} alt="" /></div>
           </div>
 
           <div className="event5 w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] lg:rounded-[50px] lg:h-[200px] lg:my-[200px] lg:w-[90%] lg:mx-5">
-            <div className="w-1/2 grid place-items-center">
-              <p className="text-lg font-large">MoraForesight 2.0</p>
-              <p className="text-md">July 2024</p>
+          <div className="flex w-1/2 items-center justify-center">
+              <div className="text-center mx-5">
+                <p className="text-lg ">MoraForeSight</p>
+                <p className="text-sm text-slate-400">July 2024</p>
               </div>
+            </div>
             <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] lg:rounded-r-[50px] lg:h-[198px]" src="/images/eventimeline/foresighy.png" width={200} height={200} alt="" /></div>
           </div>
 
           <div className="event7 w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] lg:rounded-[50px] lg:h-[200px] lg:my-[200px] lg:w-[90%] lg:mx-5">
-            <div className="w-1/2 grid place-items-center">
-              <p className="text-lg font-large">Rise Up Mora 24'</p>
-              <p className="text-md">August 2024</p>
+          <div className="flex w-1/2 items-center justify-center">
+              <div className="text-center mx-5">
+                <p className="text-lg ">Rise Up Mora</p>
+                <p className="text-sm text-slate-400">August 2024</p>
               </div>
+            </div>
             <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] lg:rounded-r-[50px] lg:h-[198px]" src="/images/eventimeline/rum.png" width={200} height={200} alt="" /></div>
           </div>
 
@@ -240,34 +248,42 @@ const EventTimelineSection = () => {
         <div className="mx-auto gap-9 content-start column-3 w-[90%] lg:w-[475px] lg:h-[100%] mt-10">
 
           <div className="event2 w-full h-[150px]  bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] lg:rounded-[50px] lg:h-[200px] lg:my-[200px] lg:w-[90%] lg:mx-5">
-              <div className="w-1/2 grid place-items-center">
-                <p className="text-lg font-large">NFB Championship</p>
-                <p className="text-md">February</p>
-                </div>
+          <div className="flex w-1/2 items-center justify-center">
+              <div className="text-center mx-5">
+                <p className="text-lg ">NFB Championship</p>
+                <p className="text-sm text-slate-400">February 2024</p>
+              </div>
+            </div>
               <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] lg:rounded-r-[50px] lg:h-[198px]" src="/images/eventimeline/nfb.png" width={200} height={200} alt="" /></div>
             </div>
 
             <div className="event4 w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] lg:rounded-[50px] lg:h-[200px] lg:my-[200px] lg:w-[90%] lg:mx-5">
-              <div className="w-1/2 grid place-items-center">
-                <p className="text-lg font-large">Mora Ventures</p>
-                <p className="text-md">June 2024</p>
-                </div>
-              <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] lg:rounded-r-[50px] lg:h-[198px]" src="/images/eventimeline/uxpl.png" width={200} height={200} alt="" /></div>
+            <div className="flex w-1/2 items-center justify-center">
+              <div className="text-center mx-5">
+                <p className="text-lg ">Mora Ventures</p>
+                <p className="text-sm text-slate-400">June 2024</p>
+              </div>
+            </div>
+              <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] lg:rounded-r-[50px] lg:h-[198px]" src="/images/eventimeline/ven.png" width={200} height={200} alt="" /></div>
             </div>
 
             <div className="event6 w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] lg:rounded-[50px] lg:h-[200px] lg:my-[200px] lg:w-[90%] lg:mx-5">
-              <div className="w-1/2 grid place-items-center">
-                <p className="text-lg font-large">MERCon 2024</p>
-                <p className="text-md">August 2024</p>
-                </div>
+              <div className="flex w-1/2 items-center justify-center">
+              <div className="text-center mx-5">
+                <p className="text-lg ">MERCon</p>
+                <p className="text-sm text-slate-400">August 2024</p>
+              </div>
+            </div>
               <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] lg:rounded-r-[50px] lg:h-[198px]" src="/images/eventimeline/merc.png" width={200} height={200} alt="" /></div>
             </div>
 
             <div className="event8 w-full h-[150px] bg-white bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 my-10 flex rounded-[20px] lg:rounded-[50px] lg:h-[200px] lg:my-[200px] lg:w-[90%] lg:mx-5">
-              <div className="w-1/2 grid place-items-center">
-                <p className="text-lg font-large">Annual General Meeting</p>
-                <p className="text-md">September 2024</p>
-                </div>
+            <div className="flex w-1/2 items-center justify-center">
+              <div className="text-center mx-5">
+                <p className="text-lg ">Annual General Meeting</p>
+                <p className="text-sm text-slate-400">September 2024</p>
+              </div>
+            </div>
               <div className="w-1/2 grid justify-items-end"><Image className="w-[200px] h-[148px] bg-black rounded-r-[20px] lg:rounded-r-[50px] lg:h-[198px]" src="/images/eventimeline/uxpl.png" width={200} height={200} alt="" /></div>
             </div>
         </div>
