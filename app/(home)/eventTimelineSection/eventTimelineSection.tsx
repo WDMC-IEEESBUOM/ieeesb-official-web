@@ -180,7 +180,7 @@ const EventTimelineSection = () => {
 
 
   return (
-    <div className="container rounded-[20px] min-w-[375px] mx-5 h-[100%] block bg-midnight sm:w-[80%] md:w-[80%] lg:w-[100%] lg:h-[100%] lg:rounded-[40px]">
+    <div className="my-20 container rounded-[20px] min-w-[375px] mx-5 h-[100%] block bg-midnight sm:w-[80%] md:w-[80%] lg:w-[100%] lg:h-[100%] lg:rounded-[40px]">
 
       <p className="block text-[30px] my-5 text-center bg-gradient-to-r from-[#007198] to-[#f1C4EF] text-transparent bg-clip-text lg:text-[60px] lg:my-10">EVENTS</p>
 
