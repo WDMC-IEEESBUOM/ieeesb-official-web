@@ -1,0 +1,38 @@
+{"blogs" : [
+    {
+        "id": 1,
+        "title": "Outstanding Student Branch Award",
+        "date": "2021-10-10",
+        "owner": "",
+        "url": "/awards/Outstanding Student Branch Award 2023.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Best Student Branch Project Award",
+        "date": "2021-10-10",
+        "owner": "",
+        "url": "/awards/Best Student Branch Project Award 2023.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Best Industry Collabarative Project Award",
+        "description":"",
+        "date": "2021-10-10",
+        "owner": "",
+        "url": "/awards/best industry collabarative project.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Outstanding Chapter Award(Student Branch Category)",
+        "date": "2021-10-10",
+        "owner": "(Student Branch Category)",
+        "url": "/awards/Outstanding chapter award.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Best Technical Chapter Award",
+        "date": "2021-10-10",
+        "owner": "Student Chapter",
+        "url": "/awards/Best technical chapter.jpg"
+    }
+]}
