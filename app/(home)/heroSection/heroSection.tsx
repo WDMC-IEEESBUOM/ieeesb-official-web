@@ -1,7 +1,21 @@
+"use client";
 import Image from "next/image";
 import styles from "./heroSection.module.css";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+  const phrases = ["INSPIRED,BY PASSION", "TO,TRANSFORM", "BEYOND,EXCELLENCE"];
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % phrases.length);
+    }, 4000); // Change text every 2 seconds
+
+    return () => clearInterval(intervalId); // Clean up the interval on component unmount
+  }, [phrases.length]);
+
+  const words = phrases[index].split(",");
   return (
     <div className="flex justify-center items-center w-screen h-[550px] overflow-hidden">
       <div className="relative w-full h-full ">
@@ -65,7 +79,9 @@ const HeroSection = () => {
 
         <div className="absolute top-1/2 transform -translate-y-[40px] w-full h-full">
           <p className={styles.text}>
-            INSPIRED BY <br /> PASSION
+            {words[0]}
+            <br />
+            {words[1]}
           </p>
         </div>
       </div>
