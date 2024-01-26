@@ -17,9 +17,32 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+@font-face {
+  font-family: 'Amenti Regular';
+  src: url('/fonts/Amenti Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amenti Bold';
+  src: url('/fonts/Amenti Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Amenti Medium';
+  src: url('/fonts/Amenti Medium.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 body {
   font-family: "DM Sans", sans-serif;
 }
+
 /* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

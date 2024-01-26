@@ -17,8 +17,8 @@ const HeroSection = () => {
 
   const words = phrases[index].split(",");
   return (
-    <div className="flex justify-center items-center w-screen h-[550px] overflow-hidden">
-      <div className="relative w-full h-full ">
+    <div className="flex justify-center items-center w-screen h-[700px] overflow-hidden bg-black bg-opacity-95 md:rounded-b-[100px] rounded-b-[70px]">
+      <div className="relative w-full h-full">
         {/* Outer Circle */}
         <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[550px] h-full">
           <Image

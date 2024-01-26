@@ -29,6 +29,7 @@
   cursor: pointer;
   color: #fff;
   transition: all 0.3s ease-in-out;
+  font-family: 'Amenti Medium';
 }
 
 .nav:hover {

@@ -1,0 +1,37 @@
+.Blog_Outer {
+  @apply flex flex-col max-w-full lg:mt-6 justify-center sm:justify-evenly bg-white text-black rounded-[60px] shadow-lg py-2 md:py-3 md:px-5 md:flex-col lg:flex-row;
+}
+
+.Blog_left {
+  @apply sm:flex sm:flex-col md:my-10 text-justify sm:border-gray-400 p-3 sm:pr-10 relative lg:max-w-lg lg:border-r-2 lg:pr-10;
+}
+
+.Our_Blogs {
+  @apply font-semibold text-[40px] my-7 md:my-1;
+  font-family: 'Amenti Bold';
+}
+
+.intro {
+  @apply text-justify font-[400] text-[20px] text-base my-7 md:my-0;
+  font-family: 'Amenti Medium';
+}
+
+.Blog_right {
+  @apply flex max-w-[1000px] md:flex-col lg:flex-row py-12 overflow-hidden;
+}
+
+.Blog_button {
+  @apply gap-3 justify-start hidden lg:flex flex-row sm:w-6/12 md:w-8/12 lg:w-5/12 bg-orange-500 hover:bg-orange-400 text-black font-semibold py-4 px-4 rounded-3xl my-7;
+}
+
+.Blog_section {
+  @apply border  rounded-[60px] py-12 sm:py-5 lg:h-[700px] mt-10 md:flex-col lg:flex-row shadow-none md:shadow-lg lg:shadow-lg w-screen max-w-[1400px] text-center text-black;
+}
+
+.Blog_button_2 {
+  @apply justify-start flex gap-3 ml-28 md:ml-72 lg:hidden w-[190px] md:w-3/12 bg-orange-500 hover:bg-orange-400 text-white font-bold rounded-3xl py-2 px-3;
+}
+
+.subt{
+  font-family: 'Amenti Bold';
+}
