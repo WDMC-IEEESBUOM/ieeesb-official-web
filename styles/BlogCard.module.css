@@ -13,7 +13,7 @@
   font-family: 'Amenti Bold'
 }
 .Blog_owner {
-  @apply text-[15px] text-gray-400 px-4;
+  @apply text-[15px] bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] bg-clip-text text-transparent px-4;
   font-family: 'Amenti Bold'
 }
 .Blog_read_button {

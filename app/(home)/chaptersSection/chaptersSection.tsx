@@ -17,24 +17,21 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const chaptersSection = () => {
+const ChaptersSection = () => {
   const images = [
     RAS, PES, WIE, EMB, NPSS, IES, SPS, COMSOC, PELS, IAS, CS, PROCOM,
   ];
 
   useEffect(() => {
     animateElement('.chaptertitle', { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1 });
-    animateElement('.logos', { sacle:0.2, opacity: 0 }, { opacity: 1, duration: 20 });
+    animateElement('.logos', { scale:0.2, opacity: 0 }, {scale: 1, opacity: 1, duration: 1 });
   }, []);
+
   const animateElement = (selector: string, from: gsap.TweenVars, to: gsap.TweenVars) => {
     const element = document.querySelectorAll(selector);
-    gsap.fromTo(element, { ...from }, { ...to, duration: 15, ease: 'slow.inOut', scrollTrigger: getScrollTrigger(selector), stagger: 100, scrollTrigger: {
-      trigger: selector,
-      start: 'top center',
-      end: 'bottom center',
-      scrub: true
-    }});
+    gsap.fromTo(element, { ...from }, { ...to, duration: 15, ease: 'power.in', stagger: 100, scrollTrigger: getScrollTrigger(selector) });
   };
+
   const getScrollTrigger = (trigger: string) => ({
     trigger,
     start: 'top center',
@@ -66,4 +63,4 @@ const chaptersSection = () => {
   );
 };
 
-export default chaptersSection;
+export default ChaptersSection;

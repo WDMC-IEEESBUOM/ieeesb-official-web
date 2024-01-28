@@ -98,7 +98,7 @@ const TeamsPage = () => {
               email="senel@sample.com"
               contact="+94 77 04 10 762"
               linkedin="www.linkedin.com/in/senel-ephraims"
-              image="img/senel.jpg"
+              image="/img/senel.jpg"
             />
             <FlipCardNewHover
               name="Chathurya Ekanayake"
@@ -106,7 +106,7 @@ const TeamsPage = () => {
               email="chathurya@sample.com"
               contact="+94 70 25 25 880"
               linkedin="www.linkedin.com/in/chathurya-ekanayake"
-              image="img/chathurya.jpg"
+              image="/img/chathurya.jpg"
             />
             <FlipCardNewHover
               name="Chathurya Ekanayake"
@@ -114,7 +114,7 @@ const TeamsPage = () => {
               email="chathurya@sample.com"
               contact="+94 70 25 25 880"
               linkedin="www.linkedin.com/in/chathurya-ekanayake"
-              image="img/chathurya.jpg"
+              image="/img/chathurya.jpg"
             />
           </div>
           <div className="flex items-center justify-center gap-5 flex-wrap mt-5">
@@ -124,7 +124,7 @@ const TeamsPage = () => {
               email="senel@sample.com"
               contact="+94 77 04 10 762"
               linkedin="www.linkedin.com/in/senel-ephraims"
-              image="img/senel.jpg"
+              image="/img/senel.jpg"
             />
             <FlipCardNewHover
               name="Chathurya Ekanayake"
@@ -132,7 +132,7 @@ const TeamsPage = () => {
               email="chathurya@sample.com"
               contact="+94 70 25 25 880"
               linkedin="www.linkedin.com/in/chathurya-ekanayake"
-              image="img/chathurya.jpg"
+              image="/img/chathurya.jpg"
             />
             <FlipCardNewHover
               name="Chathurya Ekanayake"
@@ -140,7 +140,7 @@ const TeamsPage = () => {
               email="chathurya@sample.com"
               contact="+94 70 25 25 880"
               linkedin="www.linkedin.com/in/chathurya-ekanayake"
-              image="img/chathurya.jpg"
+              image="/img/chathurya.jpg"
             />
             <FlipCardNewHover
               name="Chathurya Ekanayake"
@@ -148,7 +148,7 @@ const TeamsPage = () => {
               email="chathurya@sample.com"
               contact="+94 70 25 25 880"
               linkedin="www.linkedin.com/in/chathurya-ekanayake"
-              image="img/chathurya.jpg"
+              image="/img/chathurya.jpg"
             />
           </div>
         </div>
@@ -163,7 +163,7 @@ const TeamsPage = () => {
               email="senel@sample.com"
               contact="+94 77 04 10 762"
               linkedin="www.linkedin.com/in/senel-ephraims"
-              image="img/senel.jpg"
+              image="/img/senel.jpg"
             />
             <FlipCardNewHover
               name="Chathurya Ekanayake"
@@ -171,29 +171,29 @@ const TeamsPage = () => {
               email="chathurya@sample.com"
               contact="+94 70 25 25 880"
               linkedin="www.linkedin.com/in/chathurya-ekanayake"
-              image="img/chathurya.jpg"
+              image="/img/chathurya.jpg"
             />
           </div>
           <div className="flex items-center justify-center gap-5 flex-wrap mt-5">
             <FlipCardNewNonHover
               name="Senel Ephraims"
               designation="MEMBER"
-              image="img/senel.jpg"
+              image="/img/senel.jpg"
             />
             <FlipCardNewNonHover
               name="Senel Ephraims"
               designation="MEMBER"
-              image="img/senel.jpg"
+              image="/img/senel.jpg"
             />
             <FlipCardNewNonHover
               name="Senel Ephraims"
               designation="MEMBER"
-              image="img/senel.jpg"
+              image="/img/senel.jpg"
             />
             <FlipCardNewNonHover
               name="Senel Ephraims"
               designation="MEMBER"
-              image="img/senel.jpg"
+              image="/img/senel.jpg"
             />
           </div>
         </div>

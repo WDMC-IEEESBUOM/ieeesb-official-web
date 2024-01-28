@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image";
 import "./flipCard.css";
 
 interface FlipCardProps {
@@ -28,7 +29,7 @@ const FlipCardNewHover: React.FC<FlipCardProps> = ({
         <div className="card lg:my-5">
             <div className="card-info">
                 <div className="card-avatar">
-                    <img src={image} alt="avatar" />
+                    <Image src={image} alt="avatar" width={140} height={140}/>
                 </div>
                 <div className="card-title lg:text-[1.3em] text-[1em]">{name}</div>
                 <div className="card-subtitle lg:text-[1em] text-[0.8em]">- {designation} -</div>

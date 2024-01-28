@@ -1,5 +1,6 @@
 .navbar_container {
   background: rgba(0, 0, 0, 0.95);
+  width: 100%;
 }
 
 .navbar {

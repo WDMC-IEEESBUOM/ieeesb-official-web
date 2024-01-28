@@ -30,7 +30,7 @@ function AwardsSectionNew() {
   useEffect(() => {
     animateElement('.awardtitle', { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1 });
     animateElement('.awardinner',  { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1 });
-  }, []);
+  });
   const animateElement = (selector: string, from: gsap.TweenVars, to: gsap.TweenVars) => {
     const element = document.querySelector(selector);
     gsap.fromTo(element, { ...from }, { ...to, duration: 1, ease: 'power1.inOut', scrollTrigger: getScrollTrigger(selector) });

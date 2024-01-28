@@ -18,7 +18,7 @@ const AboutSection: React.FC = () => {
             animateElement(`.${className}`, { x: 200, opacity: 0 }, { x: 0, scale: 1, opacity: 1 })
         );
         animateElement('.fin-box', { opacity: 0 }, { scale: 1, opacity: 1 });
-    }, []);
+    });
     const animateElement = (selector: string, from: gsap.TweenVars, to: gsap.TweenVars) => {
         const element = document.querySelector(selector);
         gsap.fromTo(element, { ...from }, { ...to, duration: 1, ease: 'power1.inOut', scrollTrigger: getScrollTrigger(selector) });
