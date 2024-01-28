@@ -1,26 +1,27 @@
 "use client";
 import Image from 'next/image';
-import RAS from "./images/RAS.png";
-import PES from "./images/PES.png";
-import WIE from "./images/WIE.png";
-import EMB from "./images/EMB.png";
-import NPSS from "./images/NPSS.png";
-import IES from "./images/IES.png";
-import SPS from "./images/SPS.png";
-import COMSOC from "./images/comsoc.png";
-import PELS from "./images/PELS.png";
-import IAS from "./images/IAS.png";
-import CS from "./images/CS.png";
-import PROCOM from "./images/procom.png";
 import { useEffect } from 'react';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
+const imagePaths = [
+  '/chapterimages/RAS.png',
+  '/chapterimages/PES.png',
+  '/chapterimages/WIE.png',
+  '/chapterimages/EMB.png',
+  '/chapterimages/NPSS.png',
+  '/chapterimages/IES.png',
+  '/chapterimages/SPS.png',
+  '/chapterimages/ComSoc.png',
+  '/chapterimages/PELS.png',
+  '/chapterimages/IAS.png',
+  '/chapterimages/CS.png',
+  '/chapterimages/ProCom.png',
+];
+
 const ChaptersSection = () => {
-  const images = [
-    RAS, PES, WIE, EMB, NPSS, IES, SPS, COMSOC, PELS, IAS, CS, PROCOM,
-  ];
+  const images = imagePaths.map((imagePath) => imagePath);
 
   useEffect(() => {
     animateElement('.chaptertitle', { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1 });
