@@ -12,7 +12,6 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center bg-white justify-between scroll-smooth">
       <HeroSection />
       <AboutSection />
-      {/* <AwardsSection /> */}
       <AwardsSectionNew />
       <EventTimelineSection />
       <ChaptersSection />

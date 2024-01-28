@@ -37,7 +37,7 @@ function AwardsSectionNew() {
   };
   const getScrollTrigger = (trigger: string) => ({
     trigger,
-    start: 'top center',
+    start: 'top bottom',
     end: 'center center',
     toggleActions: 'start pause resume pause',
     scrub: 1,

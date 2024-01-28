@@ -87,7 +87,7 @@
 
 /*Hover*/
 .card:hover {
-    box-shadow: 0 8px 50px #23232333;
+    box-shadow: 0 8px 20px #0656A0;
 }
 
 .card:hover .card-info {
@@ -95,7 +95,7 @@
 }
 
 .card:hover .card-social {
-    transform: translateY(-10%);
+    transform: translateY(0%);
     opacity: 1;
 }
 
