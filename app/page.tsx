@@ -9,7 +9,7 @@ import AwardsSectionNew from './(home)/awardsSectionNew/page'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center bg-white justify-between">
+    <main className="flex min-h-screen flex-col items-center bg-white justify-between scroll-smooth">
       <HeroSection />
       <AboutSection />
       {/* <AwardsSection /> */}

@@ -1,13 +1,13 @@
 .Blog_Outer {
-  @apply flex flex-col max-w-full lg:mt-6 justify-center sm:justify-evenly bg-white text-black rounded-[60px] shadow-lg py-2 md:py-3 md:px-5 md:flex-col lg:flex-row;
+  @apply flex md:mt-5 md:mx-16 mx-7 mt-2 justify-center sm:justify-evenly bg-white rounded-[60px] shadow-lg py-2 md:py-3 md:px-5 flex-col lg:flex-row;
 }
 
 .Blog_left {
-  @apply sm:flex sm:flex-col md:my-10 text-justify sm:border-gray-400 p-3 sm:pr-10 relative lg:max-w-lg lg:border-r-2 lg:pr-10;
+  @apply sm:flex sm:flex-col md:my-10 text-justify sm:border-blue-800 p-3 sm:pr-10 relative lg:max-w-lg lg:border-r-2 lg:pr-10;
 }
 
 .Our_Blogs {
-  @apply font-semibold text-[40px] my-7 md:my-1;
+  @apply text-[40px] my-7 md:my-1;
   font-family: 'Amenti Bold';
 }
 
@@ -25,7 +25,7 @@
 }
 
 .Blog_section {
-  @apply border  rounded-[60px] py-12 sm:py-5 lg:h-[700px] mt-10 md:flex-col lg:flex-row shadow-none md:shadow-lg lg:shadow-lg w-screen max-w-[1400px] text-center text-black;
+  @apply rounded-[60px] py-12 sm:py-5 lg:h-[700px] mt-10 md:flex-col lg:flex-row shadow-none md:shadow-lg lg:shadow-lg w-screen max-w-[1400px] text-center text-black;
 }
 
 .Blog_button_2 {

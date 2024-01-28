@@ -1,15 +1,15 @@
 .Blog_card_outer {
-  @apply flex flex-col  h-[370px] w-60  md:w-[300px] md:h-[400px] lg:w-[300px] bg-white  text-black rounded-3xl mx-5 relative shadow-lg my-5 border-blue-600;
+  @apply flex flex-col h-[370px] w-60  md:w-[300px] md:h-[400px] lg:w-[300px] bg-white  text-black rounded-3xl mx-5 relative shadow-lg my-5 border-blue-800;
 }
 
 .Blog_card_image {
-  @apply rounded-t-3xl max-w-full max-h-[50vh] overflow-hidden;
+  @apply rounded-t-3xl max-w-full max-h-[50vh] overflow-hidden rounded-b-3xl;
 }
 .Blog_date {
   @apply p-4 font-thin text-[15px];
 }
 .Blog_title {
-  @apply font-bold text-center text-[17px] px-4 mx-5 items-center;
+  @apply font-bold text-center text-[17px] px-4 mx-5 items-center bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] bg-clip-text text-transparent mt-5;
   font-family: 'Amenti Bold'
 }
 .Blog_owner {
