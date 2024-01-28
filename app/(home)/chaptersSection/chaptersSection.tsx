@@ -24,11 +24,16 @@ const chaptersSection = () => {
 
   useEffect(() => {
     animateElement('.chaptertitle', { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1 });
-    animateElement('.chapterinner', { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.logos', { sacle:0.2, opacity: 0 }, { opacity: 1, duration: 20 });
   }, []);
   const animateElement = (selector: string, from: gsap.TweenVars, to: gsap.TweenVars) => {
-    const element = document.querySelector(selector);
-    gsap.fromTo(element, { ...from }, { ...to, duration: 1, ease: 'power1.inOut', scrollTrigger: getScrollTrigger(selector) });
+    const element = document.querySelectorAll(selector);
+    gsap.fromTo(element, { ...from }, { ...to, duration: 15, ease: 'slow.inOut', scrollTrigger: getScrollTrigger(selector), stagger: 100, scrollTrigger: {
+      trigger: selector,
+      start: 'top center',
+      end: 'bottom center',
+      scrub: true
+    }});
   };
   const getScrollTrigger = (trigger: string) => ({
     trigger,
@@ -44,7 +49,7 @@ const chaptersSection = () => {
       <div className='chapterinner bg-white md:mx-16 mx-7 rounded-[60px] p-10'>
         <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:gap-10 gap-6">
           {images.map((imagePath, index) => (
-            <div key={index} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+            <div className="logos" key={index} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               <Image
                 src={imagePath}
                 alt={`Image from ${imagePath}`}
