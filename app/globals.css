@@ -40,7 +40,10 @@
 }
 
 body {
+  position: static;
+  max-width: 100%;
   font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 /* body {

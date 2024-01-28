@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Footer = () => {
 
   return (
-    <div className="footerouter bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#07060D] w-screen md:rounded-t-[70px] rounded-t-[50px] py-5 relative ">
+    <div className="footerouter bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#07060D] w-[100%] md:rounded-t-[70px] rounded-t-[50px] py-5 relative ">
       <div className="grid justify-center md:mx-16 mx-7">
         <div className="grid grid-cols-8 gap-2 items-center mt-[70px] ">
           <div className="bg-white phone:col-span-8 md:col-span-4 flex justify-center h-[108px] rounded-[20px]">

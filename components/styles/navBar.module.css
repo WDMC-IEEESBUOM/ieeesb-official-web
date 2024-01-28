@@ -3,7 +3,6 @@
 }
 
 .navbar {
-  max-width: 1300px;
   margin: 0 auto;
   padding: 20px clamp(20px, 5vw, 50px);
   display: flex;
@@ -22,18 +21,20 @@
   align-items: center;
   font-weight: 500;
   gap: clamp(10px, 2vw, 30px);
+  
 }
 
 .nav {
   font-size: clamp(0.8em, 1.5vw, 1em);
   cursor: pointer;
-  color: #fff;
+  color: #69d9f5;
   transition: all 0.3s ease-in-out;
   font-family: 'Amenti Medium';
+  
 }
 
 .nav:hover {
   transform: translateY(-3px);
   transition: all 0.3s ease-in-out;
-  color: #69d9f5;
+  color: #fff;
 }
