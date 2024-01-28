@@ -25,7 +25,7 @@ const ChaptersSection = () => {
   useEffect(() => {
     animateElement('.chaptertitle', { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1 });
     animateElement('.logos', { scale:0.2, opacity: 0 }, {scale: 1, opacity: 1, duration: 1 });
-  }, []);
+  });
 
   const animateElement = (selector: string, from: gsap.TweenVars, to: gsap.TweenVars) => {
     const element = document.querySelectorAll(selector);
