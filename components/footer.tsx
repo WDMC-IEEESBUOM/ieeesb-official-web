@@ -30,6 +30,7 @@ const Footer = () => {
         { x: 0, scale: 1, opacity: 1 }
       )
     );
+    
   });
   const animateElement = (
     selector: string,
@@ -108,9 +109,9 @@ const Footer = () => {
             <Image src="/instaicon.svg" alt="inst" width={60} height={60} />
           </div>
         </div>
-        <div className="footerpart06  bg-white w-full md:h-[168px] rounded-[20px]  mt-[13px] flex justify-center items-center mb-[70px] ">
+        <div className=" bg-white w-full  rounded-[20px]  mt-[13px] flex justify-center items-center mb-[70px] ">
           <div
-            className="footerBottom  md:mx-14 mx-7 mt-8 mb-8 md:text-sm text-xs text-justify bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] bg-clip-text text-transparent"
+            className=" md:mx-14 mx-7 mt-8 mb-8 md:text-sm text-xs text-justify bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] bg-clip-text text-transparent"
             style={{ fontFamily: "Amenti Bold" }}
           >
             <ul>
