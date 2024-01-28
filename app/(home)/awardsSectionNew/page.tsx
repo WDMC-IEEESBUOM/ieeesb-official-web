@@ -2,7 +2,9 @@
 import React, { useRef, useEffect } from "react";
 import styles from "@/styles/BlogSection.module.css";
 import BlogCard from "./blogCard";
-import useFetch from "./useFetch";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 function AwardsSectionNew() {
   const brokenArrow: any = (
@@ -26,6 +28,22 @@ function AwardsSectionNew() {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    animateElement('.awardtitle', { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.awardinner',  { scale: 0.2, opacity: 0 }, { scale: 1, opacity: 1 });
+  }, []);
+  const animateElement = (selector: string, from: gsap.TweenVars, to: gsap.TweenVars) => {
+    const element = document.querySelector(selector);
+    gsap.fromTo(element, { ...from }, { ...to, duration: 1, ease: 'power1.inOut', scrollTrigger: getScrollTrigger(selector) });
+  };
+  const getScrollTrigger = (trigger: string) => ({
+    trigger,
+    start: 'top center',
+    end: 'center center',
+    toggleActions: 'start pause resume pause',
+    scrub: 1,
+  });
+
+  useEffect(() => {
     const handleWheel = (event: WheelEvent) => {
       if (sectionRef.current?.contains(event.target as Node)) {
         event.preventDefault();
@@ -39,12 +57,12 @@ function AwardsSectionNew() {
     };
   }, []);
   return (
-    <div className={` ${styles.Blog_section} shadow-2xl bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D]`}>
-      <h1 className={`${styles.Our_Blogs} bg-gradient-to-r bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent `}>Awards</h1>
-      <div className={styles.Blog_Outer}>
+    <div className={` ${styles.Blog_section} mx-26 mt-[40px] bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] w-screen max-w-[1400px] rounded-[60px] py-5 relative`}>
+      <h1 className={`${styles.Our_Blogs} awardtitle bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent `}>Awards</h1>
+      <div className={`${styles.Blog_Outer} awardinner`}>
         <div className={`${styles.Blog_left} lg:flex lg:align-middle justify-center  `}>
-          <h2 className={`${styles.subt} text-3xl font-bold lg:text-left text-center`}>We've Got Clutch Awards</h2>
-          <p className={styles.intro}>
+          <h2 className={`${styles.subt} text-3xl font-bold lg:text-left text-center bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] bg-clip-text text-transparent`}>We've Got Clutch Awards</h2>
+          <p className={`${styles.intro} bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] bg-clip-text text-transparent`}>
             Celebrating the exceptional contributions
             of individuals and teams whose pioneering
             work has reshaped our world. From technical
