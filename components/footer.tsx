@@ -61,7 +61,7 @@ const Footer = () => {
     window.open(`https://${url}`, "_blank");
   };
   return (
-    <div className=" bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#07060D] w-[100%] md:rounded-t-[70px] rounded-t-[50px] py-5 relative ">
+    <div className=" bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#07060D] w-[100%] md:rounded-t-[70px] rounded-t-[50px] py-5 relative overflow-x-hidden">
       <div className=" footercomp grid justify-center md:mx-16 mx-7">
         <div className=" grid grid-cols-8 gap-2 items-center mt-[70px] ">
           <div  onClick={() =>

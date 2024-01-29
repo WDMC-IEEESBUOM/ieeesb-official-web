@@ -32,7 +32,7 @@ const AboutSection: React.FC = () => {
     });
 
     return (     
-        <div className={`aboutSection  mx-26 mt-[40px] bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] w-screen max-w-[1400px] rounded-[60px] py-5 relative`}>
+        <div className={`aboutSection  mx-26 mt-[40px] bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] w-screen max-w-[1400px] rounded-[60px] py-5 relative overflow-x-hidden`}>
             <h1  className={`${styles.title} my-7 md:my-1 text-[40px] about-ieee flex justify-center bg-gradient-to-r  from-blue-200 to-cyan-200 bg-clip-text text-transparent`}> About IEEE </h1>
             <div className="md:flex justify-center h-517 mt-16 md:mx-16 ">
                 <div className="boxc-1 mr-7 ml-7  mb-6 md:mb-0  overflow-hidden md:max-w-3xl md:m-0 overflow-x-hidden" style={{ background: 'white', padding: '40px' , borderRadius: '50px' }}>
