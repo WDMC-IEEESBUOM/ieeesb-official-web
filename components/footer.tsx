@@ -9,24 +9,25 @@ gsap.registerPlugin(ScrollTrigger);
 const Footer = () => {
   useEffect(() => {
     // animateElement( { opacity: 0 }, { scale: 1, opacity: 1 });
-    [
-      "footerpart01",
-      "footerpart02",
-      "footerpart03",
-      "footerpart04",
-      "footerpart05",
-      "footerpart06",
-    ].forEach((className) =>
-      animateElement(
-        `.${className}`,
-        { x: 200, opacity: 0 },
-        { x: 0, scale: 1, opacity: 1 }
-      )
-    );
+    // [
+    //   "footerpart01",
+    //   "footerpart02",
+    //   "footerpart03",
+    //   "footerpart04",
+    //   "footerpart05",
+    //   "footerpart06",
+    // ].forEach((className) =>
+    //   animateElement(
+    //     `.${className}`,
+    //     { x: 200, opacity: 0 },
+    //     { x: 0, scale: 1, opacity: 1 }
+    //   )
+    // );
+
     ["footercomp"].forEach((className) =>
       animateElement(
         `.${className}`,
-        { x: 200, opacity: 0 },
+        { x: 200, opacity: 0, scale: 1},
         { x: 0, scale: 1, opacity: 1 }
       )
     );
@@ -51,8 +52,8 @@ const Footer = () => {
   };
   const getScrollTrigger = (trigger: string) => ({
     trigger,
-    start: "top bottom",
-    end: "bottom bottom",
+    start: "left right",
+    end: "left center",
     toggleActions: "start pause resume pause",
     scrub: 1,
   });
@@ -61,11 +62,11 @@ const Footer = () => {
   };
   return (
     <div className=" bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#07060D] w-[100%] md:rounded-t-[70px] rounded-t-[50px] py-5 relative ">
-      <div className=" grid justify-center md:mx-16 mx-7">
+      <div className=" footercomp grid justify-center md:mx-16 mx-7">
         <div className=" grid grid-cols-8 gap-2 items-center mt-[70px] ">
           <div  onClick={() =>
               handleRedirect("ieeesbuom.vercel.app")
-            } className=   "footercomp  ieeesbuom.vercel.app cursor-pointer bg-white phone:col-span-8 md:col-span-4 flex justify-center h-[108px] rounded-[20px]">
+            } className=   " ieeesbuom.vercel.app cursor-pointer bg-white phone:col-span-8 md:col-span-4 flex justify-center h-[108px] rounded-[20px]">
             <div style={{ width: "60%", height: "auto", position: "relative" }}>
               <Image
                 src="/IEEE STUDENT B LOGO BLUE.png"
