@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'IEEESB | UOM',
   description: 'IEEE Student Branch of University of Moratuwa',
+  authors: [{ name: 'IEEE Student Branch of University of Moratuwa' }],
 }
 
 export default function RootLayout({

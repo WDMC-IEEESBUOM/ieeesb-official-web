@@ -9,7 +9,7 @@ const imagePaths = [
   '/chapterimages/RAS.png',
   '/chapterimages/PES.png',
   '/chapterimages/WIE.png',
-  '/chapterimages/EMB.png',
+  '/chapterimages/EMBSNEW.png',
   '/chapterimages/NPSS.png',
   '/chapterimages/IES.png',
   '/chapterimages/SPS.png',
@@ -43,7 +43,7 @@ const ChaptersSection = () => {
 
   return (
     <div className="mx-26 mt-[40px] bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] w-screen max-w-[1400px] rounded-[60px] py-5 relative mb-[40px]">
-      <h1 className="chaptertitle my-1 text-[40px] text-center mb-4 bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent" style={{ fontFamily: 'Amenti Bold' }}>CHAPTERS</h1>
+      <h1 className="chaptertitle my-1 md:text-[40px] text-[30px] text-center mb-4 bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent" style={{ fontFamily: 'Amenti Bold' }}>CHAPTERS & AFFINITY GROUPS</h1>
       <div className='chapterinner bg-white md:mx-16 mx-7 rounded-[60px] p-10'>
         <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 md:gap-10 gap-6">
           {images.map((imagePath, index) => (

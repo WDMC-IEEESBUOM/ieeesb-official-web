@@ -275,7 +275,7 @@ const EventTimelineSection = () => {
             <div className="flex items-center justify-center">
               <div className="text-center">
                 <p className="lg:text-lg md:text-[12px] text-[10px] text-white" style={{ fontFamily: 'Amenti Medium' }}>JamborIEEE</p>
-                <p className="lg:text-sm md:text-[10px] text-[8px] text-white" style={{ fontFamily: 'Amenti Regular' }}>- December 2024 -</p>
+                <p className="lg:text-sm md:text-[10px] text-[8px] text-white" style={{ fontFamily: 'Amenti Regular' }}>- December 2023 -</p>
               </div>
             </div>
           </div>

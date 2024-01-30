@@ -6,6 +6,7 @@ import AwardsSection from './(home)/awardsSection/awardsSection'
 import ChaptersSection from './(home)/chaptersSection/chaptersSection'
 import { Fragment } from 'react'
 import AwardsSectionNew from './(home)/awardsSectionNew/page'
+import ScrollToTopButton from '@/components/scrollToTopButton'
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <AwardsSectionNew />
       <EventTimelineSection />
       <ChaptersSection />
+      <ScrollToTopButton />
     </main>
   )
 }

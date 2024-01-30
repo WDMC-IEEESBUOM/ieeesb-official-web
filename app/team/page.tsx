@@ -5,21 +5,22 @@ import FlipCardNewHover from "./components/FlipCardNewHover";
 import FlipCardNewNonHover from "./components/FlipCardNewNonHover";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ScrollToTopButton from "@/components/scrollToTopButton";
 gsap.registerPlugin(ScrollTrigger);
 
 const TeamsPage = () => {
 
   useEffect(() => {
-    animateElement('.committee', {  opacity: 0 }, { scale: 1, opacity: 1 });
-    animateElement('.committee1', {  opacity: 0 }, { scale: 1, opacity: 1 });
-    animateElement('.committee2', {  opacity: 0 }, { scale: 1, opacity: 1 });
-    animateElement('.committee3', {  opacity: 0 }, { scale: 1, opacity: 1 });
-    animateElement('.committee4', {  opacity: 0 }, { scale: 1, opacity: 1 });
-    animateElement('.committee5', {  opacity: 0 }, { scale: 1, opacity: 1 });
-    animateElement('.committee6', {  opacity: 0 }, { scale: 1, opacity: 1 });
-    animateElement('.committee7', {  opacity: 0 }, { scale: 1, opacity: 1 });
-    animateElement('.committee8', {  opacity: 0 }, { scale: 1, opacity: 1 });
-    animateElement('.committee9', {  opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.committee', { opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.committee1', { opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.committee2', { opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.committee3', { opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.committee4', { opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.committee5', { opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.committee6', { opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.committee7', { opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.committee8', { opacity: 0 }, { scale: 1, opacity: 1 });
+    animateElement('.committee9', { opacity: 0 }, { scale: 1, opacity: 1 });
   }, []);
 
   const animateElement = (element: string, from: gsap.TweenVars, to: gsap.TweenVars) => {
@@ -40,6 +41,7 @@ const TeamsPage = () => {
 
   return (
     <main className="flex min-h-screen flex-col items-center bg-white justify-between scroll-smooth" >
+      <ScrollToTopButton />
       <div className="w-[100%] bg-black opacity-95 rounded-b-[40px] h-[15px]"></div>
       {/* Excom */}
       <div className=" mx-26 mt-[40px] bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] w-screen max-w-[1400px] rounded-[60px] py-5 relative mb-[40px]">
@@ -55,20 +57,20 @@ const TeamsPage = () => {
               image="/team/senel.jpg"
             />
             <FlipCardNewHover
-              name="Chathurya Ekanayake"
-              designation="SECRETARY"
-              email="chathuryaekanayake@ieee.org"
-              contact="+94 70 25 25 880"
-              linkedin="www.linkedin.com/in/chathurya-ekanayake"
-              image="/team/chathurya.jpg"
-            />
-            <FlipCardNewHover
               name="Yasith Senarath"
               designation="VICE CHAIRMAN"
               email="yasithsenarath@ieee.org"
               contact="+94 71 59 60 336"
               linkedin="www.linkedin.com/in/yasith-senarath"
               image="/team/yasith.jpg"
+            />
+            <FlipCardNewHover
+              name="Chathurya Ekanayake"
+              designation="SECRETARY"
+              email="chathuryaekanayake@ieee.org"
+              contact="+94 70 25 25 880"
+              linkedin="www.linkedin.com/in/chathurya-ekanayake"
+              image="/team/chathurya.jpg"
             />
           </div>
           <div className="flex items-center justify-center gap-5 flex-wrap mt-5">
