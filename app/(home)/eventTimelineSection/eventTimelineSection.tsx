@@ -180,24 +180,6 @@ const EventTimelineSection = () => {
         },
       }
     );
-
-    // gsap.fromTo(
-    //   document.querySelectorAll(".event9"),
-    //   { scale: 0.2, opacity: 0 },
-    //   {
-    //     scale: 1,
-    //     opacity: 1,
-    //     duration: 1,
-    //     ease: "power1.in",
-    //     scrollTrigger: {
-    //       trigger: ".event9",
-    //       start: "top bottom",
-    //       end: "center center",
-    //       toggleActions: "start restart restart restart",
-    //       scrub: 1,
-    //     },
-    //   }
-    // );
   });
 
   return (
@@ -264,24 +246,6 @@ const EventTimelineSection = () => {
               </div>
             </div>
           </div>
-          {/* <div className="event7 h-[80px] flex rounded-[20px] md:mx-10 mx-5 lg:px-20 md:px-5 px-2 mb-[120px]  bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] justify-center">
-            <div className="flex items-center justify-center">
-              <div className="text-center">
-                <p
-                  className="lg:text-lg md:text-[12px] text-[10px] text-white"
-                  style={{ fontFamily: "Amenti Medium" }}
-                >
-                  Mora Ventures
-                </p>
-                <p
-                  className="lg:text-sm md:text-[10px] text-[8px] text-white"
-                  style={{ fontFamily: "Amenti Regular" }}
-                >
-                  - June 2024 -
-                </p>
-              </div>
-            </div>
-          </div> */}
           <div className="event7 h-[80px] flex rounded-[20px] md:mx-10 mx-5 lg:px-20 md:px-5 px-2 my-[10px] mb-[80px] bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] justify-center">
             <div className="flex items-center justify-center">
               <div className="text-center">
@@ -334,10 +298,6 @@ const EventTimelineSection = () => {
             <div className="w-2 h-[100px] bg-[#0E559D] absolute"></div>
             <div className="rounded-full h-8 w-8 bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] absolute "></div>
           </div>
-          {/* <div className="event9 w-10 relative h-[100px] flex items-center justify-center">
-            <div className="w-2 h-[100px] rounded-b-[50px] bg-[#0E559D] absolute"></div>
-            <div className="rounded-full h-8 w-8 bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] absolute "></div>
-          </div> */}
         </div>
         <div className="content-center column-3">
           <div className="event2 h-[80px] mt-[110px] flex rounded-[20px] md:mx-10 mx-5 lg:px-20 md:px-5 px-2 bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#0E559D] justify-center">
