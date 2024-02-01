@@ -8,7 +8,6 @@ gsap.registerPlugin(ScrollTrigger);
 const imagePaths = [
   '/chapterimages/RAS.png',
   '/chapterimages/PES.png',
-  '/chapterimages/WIE.png',
   '/chapterimages/EMBSNEW.png',
   '/chapterimages/NPSS.png',
   '/chapterimages/IES.png',
@@ -18,6 +17,7 @@ const imagePaths = [
   '/chapterimages/IAS.png',
   '/chapterimages/CS.png',
   '/chapterimages/ProCom.png',
+  '/chapterimages/WIE.png',
 ];
 
 const ChaptersSection = () => {
