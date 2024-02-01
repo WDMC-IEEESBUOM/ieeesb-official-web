@@ -69,7 +69,7 @@ const Footer = () => {
             } className=   " ieeesbuom.vercel.app cursor-pointer bg-white phone:col-span-8 md:col-span-4 flex justify-center h-[108px] rounded-[20px]">
             <div style={{ width: "60%", height: "auto", position: "relative" }}>
               <Image
-                src="/IEEE STUDENT B LOGO BLUE.png"
+                src="/IEEESTUDENTBLOGOBLUE.png/"
                 alt="logo"
                 layout="fill"
                 objectFit="contain"

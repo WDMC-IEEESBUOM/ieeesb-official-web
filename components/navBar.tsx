@@ -19,7 +19,7 @@ const NavBar = () => {
       <div className={styles.navbar}>
         <span className={styles.brand_container}>
           <Image
-            src={brand}
+            src='/IEEESTUDENTBLOGOBLUE.png/'
             className={styles.brand}
             alt="IEEE Logo"
             width={450}
