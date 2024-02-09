@@ -19,13 +19,13 @@ const NavBar = () => {
       <div className={styles.navbar}>
         <span className={styles.brand_container}>
           <Image
-            src='/IEEESTUDENTBLOGOBLUE.png/'
+            src='/ieeesblogo.png'
             className={styles.brand}
             alt="IEEE Logo"
             width={450}
             height={450}
             quality={100}
-            style={{cursor: 'pointer'}}
+            style={{ cursor: 'pointer' }}
             onClick={() => handleNavigate('/')}
           />
         </span>

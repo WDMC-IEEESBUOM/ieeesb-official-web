@@ -27,11 +27,11 @@ const Footer = () => {
     ["footercomp"].forEach((className) =>
       animateElement(
         `.${className}`,
-        { x: 200, opacity: 0, scale: 1},
+        { x: 200, opacity: 0, scale: 1 },
         { x: 0, scale: 1, opacity: 1 }
       )
     );
-    
+
   });
   const animateElement = (
     selector: string,
@@ -64,12 +64,12 @@ const Footer = () => {
     <div className=" bg-gradient-to-r from-[#07060D] via-[#0E559D] to-[#07060D] w-[100%] md:rounded-t-[70px] rounded-t-[50px] py-5 relative overflow-x-hidden">
       <div className=" footercomp grid justify-center md:mx-16 mx-7">
         <div className=" grid grid-cols-8 gap-2 items-center mt-[70px] ">
-          <div  onClick={() =>
-              handleRedirect("ieeesbuom.vercel.app")
-            } className=   " ieeesbuom.vercel.app cursor-pointer bg-white phone:col-span-8 md:col-span-4 flex justify-center h-[108px] rounded-[20px]">
+          <div onClick={() =>
+            handleRedirect("ieeesb.uom.lk")
+          } className=" ieeesbuom.vercel.app cursor-pointer bg-white phone:col-span-8 md:col-span-4 flex justify-center h-[108px] rounded-[20px]">
             <div style={{ width: "60%", height: "auto", position: "relative" }}>
               <Image
-                src="/IEEESTUDENTBLOGOBLUE.png/"
+                src="/ieeesblogo.png"
                 alt="logo"
                 layout="fill"
                 objectFit="contain"
