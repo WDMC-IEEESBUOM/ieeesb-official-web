@@ -32,7 +32,7 @@ const NavBar = () => {
         <ul className={styles.nav_container}>
           <li className={styles.nav} onClick={() => handleNavigate('/')}>Home</li>
           <li className={styles.nav} onClick={() => handleNavigate('/team/')}>Team</li>
-          <li className={styles.nav} onClick={() => handleNavigate('/register/')}>Register</li>
+          {/* <li className={styles.nav} onClick={() => handleNavigate('/register/')}>Register</li> */}
         </ul>
       </div>
     </div>
