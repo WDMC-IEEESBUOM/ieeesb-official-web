@@ -39,21 +39,14 @@ const MyBook: React.FC<MyBookProps> = () => {
   const [currentPage, setCurrentPage] = useState<number>(0);
   const pageFlipRef = useRef<HTMLFlipBook>(null);
 
-  // const goToNextPage = useCallback(() => {
-  //   if (pageFlipRef.current && pageFlipRef.current.getPageFlip()) {
-  //     const nextPage = currentPage + 1;
-  //     pageFlipRef.current.getPageFlip().flipNext();
-  //     setCurrentPage(nextPage);
-  //   }
-  // }, [currentPage]);
 
   return (
     <div>
       <HTMLFlipBook
-        className='h-500 md:h-700 '
+        className='w-350 md:w-500 '
         flippingTime={800}
-        width={500}
-        height={700}
+        width={370}
+        height={540}
         startPage={currentPage}
         ref={pageFlipRef}
         style={{ margin: 'auto'}}
@@ -63,13 +56,11 @@ const MyBook: React.FC<MyBookProps> = () => {
         pic16, pic17, pic18, pic19, pic20, pic21, pic22, pic23, pic24, pic25, pic26, pic27
       ].map((pic, index) => (
           <div key={index}>
-            <Image src={pic} alt="" width={500} height={300} quality={100} />
-            <p>Page number: {index + 1}</p>
+            <Image src={pic} alt="" width={370} height={300} quality={100} />
           </div>
         ))}
       </HTMLFlipBook>
       
-      {/* <button onClick={goToNextPage}>Next Page</button> */}
     </div>
   );
 };
