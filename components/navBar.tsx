@@ -29,14 +29,25 @@ const NavBar = () => {
             style={{ cursor: "pointer" }}
             onClick={() => handleNavigate("/")}
           />
-          <Image
-            onClick={() => setCollapsed(!collapsed)}
-            className={styles.toggle}
-            src="https://img.icons8.com/ios-glyphs/50/ffffff/menu--v3.png"
-            alt="menu--v3"
-            width={35}
-            height={35}
-          />
+          {
+            collapsed ?
+              <Image
+                onClick={() => setCollapsed(!collapsed)}
+                className={styles.toggle}
+                src="/hamburgericon.png"
+                alt="menu--v3"
+                width={35}
+                height={35}
+              /> :
+              <Image
+                onClick={() => setCollapsed(!collapsed)}
+                className={styles.toggle}
+                src="/crossicon.png"
+                alt="menu--v3"
+                width={35}
+                height={35}
+              />
+          }
         </div>
         <ul className={styles.nav_container}>
           <li className={styles.nav} onClick={() => handleNavigate("/")}>
@@ -53,9 +64,8 @@ const NavBar = () => {
           </li>
         </ul>
         <ul
-          className={`${styles.nav_container_responsive} ${
-            collapsed ? styles.collapsed : styles.expanded
-          }`}
+          className={`${styles.nav_container_responsive} ${collapsed ? styles.collapsed : styles.expanded
+            }`}
         >
           <li className={styles.nav} onClick={() => handleNavigate("/")}>
             Home
