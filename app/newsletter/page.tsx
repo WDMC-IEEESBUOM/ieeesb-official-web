@@ -3,7 +3,6 @@ import React, { useRef, useState, useCallback, useEffect } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import Image from 'next/image';
 
-// Importing images dynamically
 const images = Array.from({ length: 27 }, (_, index) => {
   return require(`../../public/newsletter/edition1/${String(index + 1)}.jpg`);
 });
@@ -27,7 +26,7 @@ const MyBook: React.FC<MyBookProps> = () => {
           INNOSPHERE - EDITION #1
         </h1>
         <p className="bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent text-center text-[10px]" style={{ fontFamily: 'Amenti Bold' }}>
-          {isMobile ? 'Touch and hold to flip the pages' : 'Click to flip the pages'}
+          Click to flip pages
         </p>
         <div className="bg-white md:mx-16 rounded-[60px] pt-8 relative flex items-center justify-center flex-column">
           <HTMLFlipBook
